@@ -7,6 +7,20 @@
   -webkit-transform: $transform
   transform: $transform
 
+=center()
+  display: flex
+  justify-content: center
+  align-items: center
+
+=space()
+  display: flex
+  justify-content: space-between
+
+=top()
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+
 //  MIXIN
 @mixin font($color: $textBlack, $family: $regular, $weight: normal, $size: $fontSize, $line: 1)
   font:
