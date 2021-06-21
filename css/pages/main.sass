@@ -1,0 +1,210 @@
+.benefits
+  padding: 55px 0
+  background: $lightestGray
+  &__list
+    +space-nw
+  &__item
+    display: flex
+    font-size: 24px
+    @include font($textBlack, 400, 24px, 1.5)
+    &_main
+      align-items: center
+      &::before
+        margin-right: 30px
+      &:first-child::before
+        content: url("../images/benef1.svg")
+      &:nth-child(2)::before
+        content: url("../images/benef2.svg")
+      &:nth-child(3)::before
+        content: url("../images/benef3.svg")
+
+.services
+  &__list
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+    grid-gap: 20px
+  &__item
+    position: relative
+    overflow: hidden
+    &__title
+      margin-bottom: 20px
+      @include font($blue, 800, 30px, 1.1)
+      z-index: inherit
+    &:first-child .services__image-block
+      background: url("../images/serv1.jpg") no-repeat
+    &:nth-child(2) .services__image-block
+      background: url("../images/serv2.jpg") no-repeat
+    &:nth-child(3) .services__image-block
+      background: url("../images/serv3.jpg") no-repeat
+    &:nth-child(4) .services__image-block
+      background: url("../images/serv4.jpg") no-repeat
+    &:nth-child(5) .services__image-block
+      background: url("../images/serv5.jpg") no-repeat
+    &:nth-child(6) .services__image-block
+      background: url("../images/serv6.jpg") no-repeat
+  &__image-block
+    height: 336px
+    z-index: 20
+  &__info
+    padding: 30px
+    &__list__item
+      @include font($textBlack, 600, 18px, 1.7)
+      &::before
+        margin-right: 15px
+        content: url(../images/checked.svg)
+        background: #ffffff
+        width: 20px
+        height: 20px
+        +round
+        display: inline-flex
+        justify-content: center
+        align-items: center
+    &__first-row
+      +space-nw
+    &__button-wrapper
+      height: 100%
+      display: flex
+
+  &_main
+    //& h2.title
+    //  position: relative
+    //  &::before
+    //    content: 'КОМПЕТЕНЦИИ'
+    //    position: absolute
+    //    @include font($lightestGray, 800, 145px, 1)
+    //    top: -101px
+    //    left: -4px
+
+
+    & .services
+      margin-top: 70px
+      &__info
+        position: absolute
+        display: flex
+        flex-direction: column
+        left: 0
+        right: 0
+        top: 220px
+        bottom: 0
+        @include transition(all 0.3s ease-in-out)
+        z-index: 30
+        +box-sizing(border-box)
+
+        &__first-row
+          z-index: 30
+        &__list__item
+          color: #ffffff
+
+      &__item
+        &:hover .services__info
+          top: 0
+        &:hover .services__image-block::before
+          background: rgba(19, 120, 186, 0.9)
+
+
+        &__title
+          color: #ffffff
+      &__image-block
+        position: relative
+        &::before
+          content: ''
+          position: absolute
+          top: 0
+          bottom: 0
+          right: 0
+          left: 0
+          +border-radius(10px)
+          background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0))
+          @include transition(background 0.5s)
+
+.bg-text
+  position: relative
+  z-index: -1
+  &::before
+    position: absolute
+    @include font($lightestGray, 800, 145px, 1)
+  &_services::before
+    content: 'КОМПЕТЕНЦИИ'
+    top: -101px
+    left: -4px
+
+.questions
+  margin-top: 95px
+  padding: 65px 0
+  background: url("../images/bg_stripe.jpg") no-repeat
+  & .wrapper
+    +space-nw
+  &__text
+    display: inline-block
+  &__title
+    display: block
+    font-size: 42px
+    font-weight: 600
+
+
+.approach
+  &__text-block
+    line-height: 1.6
+  &__text-highlight
+    margin: 80px 0 70px
+    padding: 20px 50px
+    display: block
+    border-radius: 35px
+    font-size: 24px
+    font-weight: 600
+    line-height: 1
+    background: #1378BA
+    color: #ffffff
+  &__img
+    float: right
+    max-width: 45%
+
+.staff
+  background: url("../images/bg_paper.jpg") no-repeat top left
+  &__text
+    padding: 10px 0 85px
+  &__item
+    display: inline-flex
+    &__link
+      +flex-column
+    &__content
+      padding: 0 25px 20px
+      position: relative
+    &__achievements
+      display: flex
+      position: absolute
+      top: -70px
+      left: 25px
+      & img
+        margin-right: 10px
+    &__surname
+      margin-top: 10px
+      font-size: 36px
+      font-weight: 600
+    &__name
+      +flex-column
+      font-size: 24px
+      border-bottom: 1px solid $lightGray
+      svg
+        margin: 10px 0 -1px
+    &__prof
+      margin-top: 10px
+      color: $gray
+      font-size: 12px
+      font-weight: 600
+
+.portfolio
+  &_main
+    margin-top: 80px
+    padding-top: 90px
+    background: url("../images/bg_portfolio.jpg") no-repeat top left
+    & .title
+      margin: 0
+      text-align: center
+
+.copyright
+  &__block
+    display: flex
+    flex-direction: column
+
+

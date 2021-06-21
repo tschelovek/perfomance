@@ -1,0 +1,72 @@
+.header
+  &_main
+    background: url(../images/bag_header_main.jpg) center top no-repeat
+    &__content
+      display: flex
+      &__right-block
+        margin-left: 90px
+        font-size: 24px
+        line-height: 1.5
+    &__links
+      margin-top: 120px
+      &_portfolio
+        margin: 50px 0 -10px
+        padding: 30px 100px 100px 38px
+        background-color: #1378BA
+        font-size: 24px
+        font-weight: 800
+        color: #ffffff
+        +border-radius(10px)
+  &__top
+    +space
+    align-items: center
+    &__nav-list
+      display: flex
+      li:not(:last-child)
+        margin-right: 3em
+    &__nav-link
+      @include font($textBlack, 800, 16px, 1)
+      &:hover
+        color: $blue
+    &__right-block
+      +flex-column
+      align-items: center
+  &__bottom
+    //display: flex
+    &_main
+      margin-top: 50px
+  &__nav-list
+    &_bottom
+      display: flex
+      &_main
+        padding: 0 30px
+        flex-direction: column
+        +border-radius(10px)
+        background: #efeff2
+        li
+          padding: 15px 0
+    &__link
+      padding: 10px 0
+      font-weight: 800
+      white-space: nowrap
+      svg
+        margin-right: 13px
+        vertical-align: middle
+
+
+.logo
+  padding: 25px 0
+  position: relative
+  &__text
+    padding: 7px 12px
+    position: absolute
+    bottom: 34px
+    right: -90px
+    background-color: #ffffff
+
+    @include font($blue, 700, 10px, 1)
+    text-transform: uppercase
+
+
+
+

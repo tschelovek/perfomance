@@ -1,0 +1,30 @@
+.footer
+  padding: 60px 0 65px
+  background: url("../images/bg_footer.jpg") no-repeat
+  & .wrapper
+    display: flex
+  &__column
+    &:nth-child(-n+2)
+      width: 40%
+    &:nth-child(2)
+      display: flex
+  &__nav
+    &:first-child
+      width: 40%
+    &__item
+      margin-bottom: 15px
+    &__link
+      padding: 5px 0 0
+      font-size: 18px
+      font-weight: 600
+      @include transition(color 0.3s)
+      svg
+        margin: 0 15px 3px 0
+      svg circle
+        @include transition(opacity 0.3s ease-in-out)
+      &:hover
+        color: $blue
+      &:hover svg circle
+        opacity: 1
+
+

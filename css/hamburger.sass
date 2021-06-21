@@ -5,12 +5,16 @@
   display: none
 
 .adaptive-menu-toggle
+  margin: auto
+  position: relative
   display: block
   width: 30px
   height: 24px
   z-index: 99
-  position: relative
-  margin: auto
+  background: inherit
+  border: none
+  &:focus
+    outline: none
 
 .menu-toggle-inner
   width: 100%
@@ -97,7 +101,7 @@
 @media only screen and (max-width: 1200px)
   .header__hamburger
     display: block !important
-    position: absolute
+
     right: 10px
     top: 20px
 

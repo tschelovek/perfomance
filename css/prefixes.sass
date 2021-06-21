@@ -10,6 +10,10 @@
   justify-content: center
   align-items: center
 
+=flex-column()
+  display: flex
+  flex-direction: column
+
 =space()
   display: flex
   justify-content: space-between
@@ -63,10 +67,9 @@
   transition: all 0.4s ease 0s
 
 //  MIXIN
-@mixin font($color: $textBlack, $family: $regular, $weight: 400, $size: 22px, $line: 1.5)
+@mixin font($color: $textBlack, $weight: 400, $size: 22px, $line: 1.5)
   font:
     size: $size
-    family: $family
     weight: $weight
   color: $color
   line-height: $line
