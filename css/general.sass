@@ -46,6 +46,9 @@ ul
 .green
   color: $green
 
+.grey
+  color: $notSoLightGray
+
 .innerTitle
   @include font($textBlack, 400, 72px, 1)
   margin: 0 0 70px
@@ -73,10 +76,13 @@ ul
     color: $textBlack
     background-color: $lightGray
   &_transperent
-    padding: 0 20px
+    margin-bottom: 13px
+    padding: 9px 20px 8px
+    display: flex
+    align-items: flex-start
     background: inherit
     border: 3px solid $blue
-    @include font($textBlack, 700, 24px)
+    @include font($textBlack, 700, 24px, 1)
     @include transition(border 0.3s)
     &:hover
       border-color: $green
@@ -84,13 +90,25 @@ ul
     padding: 26px 55px
     +border-radius(35px)
     background: linear-gradient(to right, $blue, $green)
+  &_white
+    padding: 26px 55px
+    +border-radius(35px)
+    font-weight: 800
+    color: $blue
+    background: #ffffff
+    @include transition(all 0.3s)
+    &:hover
+      color: $green
   &_arrowR::after
     margin-left: 40px
     content: url("../images/arrow_btn.svg")
+  &_phone-icon::before
+    margin-right: 10px
+    content: url("../images/phone_grey.svg")
   &_round
     width: 40px
     height: 40px
-    background: #ffffff
+    background: $blue
     +round
     +center
 
@@ -135,7 +153,7 @@ ul
       button
         +transition
         width: 100%
-        background: #FECA8B
+        background: linear-gradient(to right, $blue, $green)
         opacity: 1
 
 .slick-arrow

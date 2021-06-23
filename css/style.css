@@ -177,6 +177,10 @@ ul {
   color: #29B179;
 }
 
+.grey {
+  color: #A3A3A3;
+}
+
 .innerTitle {
   font-size: 72px;
   font-weight: 400;
@@ -226,13 +230,16 @@ ul {
   background-color: #c4c4c4;
 }
 .btn_transperent {
-  padding: 0 20px;
+  margin-bottom: 13px;
+  padding: 9px 20px 8px;
+  display: flex;
+  align-items: flex-start;
   background: inherit;
   border: 3px solid #1378BA;
   font-size: 24px;
   font-weight: 700;
   color: #000000;
-  line-height: 1.5;
+  line-height: 1;
   -moz-transition: border 0.3s;
   -o-transition: border 0.3s;
   -webkit-transition: border 0.3s;
@@ -248,14 +255,34 @@ ul {
   border-radius: 35px;
   background: linear-gradient(to right, #1378BA, #29B179);
 }
+.btn_white {
+  padding: 26px 55px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  font-weight: 800;
+  color: #1378BA;
+  background: #ffffff;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn_white:hover {
+  color: #29B179;
+}
 .btn_arrowR::after {
   margin-left: 40px;
   content: url("../images/arrow_btn.svg");
 }
+.btn_phone-icon::before {
+  margin-right: 10px;
+  content: url("../images/phone_grey.svg");
+}
 .btn_round {
   width: 40px;
   height: 40px;
-  background: #ffffff;
+  background: #1378BA;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -314,7 +341,7 @@ ul {
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   width: 100%;
-  background: #FECA8B;
+  background: linear-gradient(to right, #1378BA, #29B179);
   opacity: 1;
 }
 
@@ -403,17 +430,39 @@ ul {
 .header__top__nav-list {
   display: flex;
 }
-.header__top__nav-list li:not(:last-child) {
-  margin-right: 3em;
+.header__top__nav-item {
+  padding: 2em 1em;
+  position: relative;
+}
+.header__top__nav-item:hover .header__top__nav-link::before {
+  width: calc(100% - 3em);
 }
 .header__top__nav-link {
+  padding: 1em 0.5em;
   font-size: 16px;
   font-weight: 800;
   color: #000000;
   line-height: 1;
 }
+.header__top__nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  height: 3px;
+  left: 1.5em;
+  width: 0;
+  background: #1378BA;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
 .header__top__nav-link:hover {
   color: #1378BA;
+  transition: all 0.3s ease-in-out;
+}
+.header__top__nav-link:hover::before {
+  background: linear-gradient(to left, #29B179, #1378BA);
 }
 .header__top__right-block {
   display: flex;
@@ -448,13 +497,12 @@ ul {
 }
 
 .logo {
-  padding: 25px 0;
   position: relative;
 }
 .logo__text {
   padding: 7px 12px;
   position: absolute;
-  bottom: 34px;
+  bottom: 10px;
   right: -90px;
   background-color: #ffffff;
   font-size: 10px;
@@ -957,6 +1005,12 @@ ul {
 .services_main .services__item:hover .services__image-block::before {
   background: rgba(19, 120, 186, 0.9);
 }
+.services_main .services__item:hover .btn_round {
+  background: #ffffff;
+}
+.services_main .services__item:hover .btn_round > svg > path {
+  fill: #1378BA;
+}
 .services_main .services__item__title {
   color: #ffffff;
 }
@@ -1081,6 +1135,10 @@ ul {
   font-weight: 600;
 }
 
+.portfolio {
+  display: flex;
+  flex-direction: column;
+}
 .portfolio_main {
   margin-top: 80px;
   padding-top: 90px;
@@ -1089,6 +1147,50 @@ ul {
 .portfolio_main .title {
   margin: 0;
   text-align: center;
+}
+.portfolio__list {
+  margin-top: 95px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+}
+.portfolio__img {
+  max-height: 500px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  z-index: 20;
+}
+.portfolio__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #ffffff;
+}
+.portfolio__item__text {
+  z-index: 30;
+}
+.portfolio__item__text-container {
+  position: absolute;
+  left: 50px;
+  bottom: 45px;
+}
+.portfolio__item__text-container::before {
+  content: url("../images/evonik.png");
+}
+.portfolio__item__text__title {
+  margin-top: 30px;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+.portfolio__item__text__info {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.portfolio .btn_white {
+  margin: 105px auto;
 }
 
 .copyright__block {

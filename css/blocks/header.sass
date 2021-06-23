@@ -22,12 +22,40 @@
     align-items: center
     &__nav-list
       display: flex
-      li:not(:last-child)
-        margin-right: 3em
+      //li:not(:last-child)
+      //  margin-right: 3em
+    &__nav-item
+      padding: 2em 1em
+      position: relative
+      //&::before
+      //  content: ''
+      //  position: absolute
+      //  bottom: -1px
+      //  height: 3px
+      //  left: 0
+      //  width: 0
+      //  background: $blue
+      //  @include transition(all 0.3s)
+      &:hover .header__top__nav-link::before
+        width: calc(100% - 3em)
     &__nav-link
+      padding: 1em 0.5em
       @include font($textBlack, 800, 16px, 1)
+      &::before
+        content: ''
+        position: absolute
+        bottom: -1px
+        height: 3px
+        left: 1.5em
+        width: 0
+        background: $blue
+        @include transition(all 0.3s)
       &:hover
         color: $blue
+        transition: all 0.3s ease-in-out
+      &:hover::before
+        background: linear-gradient(to left, $green, $blue)
+
     &__right-block
       +flex-column
       align-items: center
@@ -55,15 +83,13 @@
 
 
 .logo
-  padding: 25px 0
   position: relative
   &__text
     padding: 7px 12px
     position: absolute
-    bottom: 34px
+    bottom: 10px
     right: -90px
     background-color: #ffffff
-
     @include font($blue, 700, 10px, 1)
     text-transform: uppercase
 
