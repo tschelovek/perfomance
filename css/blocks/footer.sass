@@ -1,6 +1,8 @@
 .footer
   padding: 60px 0 65px
   background: url("../images/bg_footer.jpg") no-repeat
+  & .logo__text
+    border-radius: 12px
   & .wrapper
     display: flex
   &__column
@@ -26,5 +28,30 @@
         color: $blue
       &:hover svg circle
         opacity: 1
+  &__contacts
+    &__item
+      &:not(:first-child)
+        margin: 0 0 13px 33px
+        max-width: 270px
+        position: relative
+        line-height: 20px
+      &::before
+        position: absolute
+        left: -33px
+      &:nth-child(2)::before
+        content: url(../images/icon_clock_color.svg)
+      &:nth-child(3)::before, .contacts__item_address::before
+        content: url(../images/icon_location_color.svg)
+      &:last-child::before, .contacts__item_email::before
+        content: url(../images/icon_mail_color.svg)
 
+.copyright
+  &__block
+    margin-top: 30px
+    display: flex
+    flex-direction: column
+    font-size: 15px
+    line-height: 24px
 
+.policy
+  color: $blue

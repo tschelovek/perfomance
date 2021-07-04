@@ -1,4 +1,5 @@
 .header
+  background: url(../images/bg_header_common.jpg) center top no-repeat
   &_main
     background: url(../images/bag_header_main.jpg) center top no-repeat
     &__content
@@ -7,37 +8,28 @@
         margin-left: 90px
         font-size: 24px
         line-height: 1.5
+        & .btn_gradient
+          margin-top: 55px
     &__links
       margin-top: 120px
       &_portfolio
-        margin: 50px 0 -10px
-        padding: 30px 100px 100px 38px
+        margin: 60px 0 -10px
+        padding: 30px 26px 35px 38px
         background-color: #1378BA
         font-size: 24px
         font-weight: 800
         color: #ffffff
         +border-radius(10px)
+        & .btn
+          margin: 20px 0 0 auto
   &__top
     +space
     align-items: center
     &__nav-list
       display: flex
-      //li:not(:last-child)
-      //  margin-right: 3em
     &__nav-item
-      padding: 2em 1em
+      padding: 3em 1em
       position: relative
-      //&::before
-      //  content: ''
-      //  position: absolute
-      //  bottom: -1px
-      //  height: 3px
-      //  left: 0
-      //  width: 0
-      //  background: $blue
-      //  @include transition(all 0.3s)
-      &:hover .header__top__nav-link::before
-        width: calc(100% - 3em)
     &__nav-link
       padding: 1em 0.5em
       @include font($textBlack, 800, 16px, 1)
@@ -48,13 +40,13 @@
         height: 3px
         left: 1.5em
         width: 0
-        background: $blue
+        background: linear-gradient(to left, $green, $blue)
         @include transition(all 0.3s)
       &:hover
         color: $blue
         transition: all 0.3s ease-in-out
       &:hover::before
-        background: linear-gradient(to left, $green, $blue)
+        width: calc(100% - 3em)
 
     &__right-block
       +flex-column
@@ -67,25 +59,38 @@
     &_bottom
       display: flex
       &_main
-        padding: 0 30px
+        //padding: 0 30px
         flex-direction: column
         +border-radius(10px)
         background: #efeff2
-        li
-          padding: 15px 0
+      &_common
+        margin: 10px 0
+        justify-content: space-between
+        & .header
+          &__nav-list__link
+            padding: 5px 0
     &__link
-      padding: 10px 0
+      padding: 22px 30px
+      display: block
+      border-radius: 10px
       font-weight: 800
       white-space: nowrap
+      background: inherit
+      @include transition()
       svg
         margin-right: 13px
         vertical-align: middle
+      &:hover
+        color: $blue
+        background: #ffffff
+      &:hover svg path
+        fill: $blue
 
 
 .logo
   position: relative
   &__text
-    padding: 7px 12px
+    padding: 8px 12px 6px
     position: absolute
     bottom: 10px
     right: -90px
@@ -93,6 +98,10 @@
     @include font($blue, 700, 10px, 1)
     text-transform: uppercase
 
-
-
+.work-time
+  font-size: 15px
+  &::before
+    margin-right: 6px
+    content: url(../images/icon_clock_grey.svg)
+    vertical-align: middle
 

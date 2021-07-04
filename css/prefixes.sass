@@ -67,14 +67,14 @@
   transition: all 0.4s ease 0s
 
 //  MIXIN
-@mixin font($color: $textBlack, $weight: 400, $size: 22px, $line: 1.5)
+@mixin  font($color: $textBlack, $weight: 400, $size: 22px, $line: 1.5)
   font:
     size: $size
     weight: $weight
   color: $color
   line-height: $line
 
-@mixin transition($transition: all 0.4s ease 0s)
+@mixin transition($transition: all 0.3s ease-in-out)
   -moz-transition: $transition
   -o-transition: $transition
   -webkit-transition: $transition

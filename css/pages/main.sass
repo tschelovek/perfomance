@@ -26,6 +26,7 @@
   &__item
     position: relative
     overflow: hidden
+    +border-radius(10px)
     &__title
       margin-bottom: 20px
       @include font($blue, 800, 30px, 1.1)
@@ -47,6 +48,8 @@
     z-index: 20
   &__info
     padding: 30px
+    display: flex
+    flex-direction: column
     &__list__item
       @include font($textBlack, 600, 18px, 1.7)
       &::before
@@ -64,24 +67,14 @@
     &__button-wrapper
       height: 100%
       display: flex
+    & .btn_small
+      margin-top: 25px
 
   &_main
-    //& h2.title
-    //  position: relative
-    //  &::before
-    //    content: 'КОМПЕТЕНЦИИ'
-    //    position: absolute
-    //    @include font($lightestGray, 800, 145px, 1)
-    //    top: -101px
-    //    left: -4px
-
-
     & .services
       margin-top: 70px
       &__info
         position: absolute
-        display: flex
-        flex-direction: column
         left: 0
         right: 0
         top: 220px
@@ -120,6 +113,17 @@
           +border-radius(10px)
           background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0))
           @include transition(background 0.5s)
+
+  &_page
+    & .services
+      margin-top: 60px
+      &__item
+        background-color: #F3F3F3
+        &__title
+          @include font($blue, 800, 30px, 1.15)
+      &__image-block
+        +border-radius(10px)
+
 
 .bg-text
   position: relative
@@ -163,12 +167,36 @@
     float: right
     max-width: 45%
 
+.s_staff_service-page
+  margin-top: 100px
+
 .staff
   background: url("../images/bg_paper.jpg") no-repeat top left
+  & .title
+    max-width: 810px
   &__text
     padding: 10px 0 85px
+    display: flex
+    align-items: center
+    &__sertif
+      margin-left: 200px
+      svg
+        padding-top: 90px
+        margin-bottom: 30px
+      p
+        font-size: 18px
+        font-weight: 600
+        color: $darkGray
+        line-height: 1.5
+    &__link
+      color: $blue
+      @include transition()
+      &:hover
+        color: $green
+  &__list
+    margin: 0 -10px
   &__item
-    display: inline-flex
+    margin: 0 10px
     &__link
       +flex-column
     &__content
@@ -202,7 +230,7 @@
   &_main
     margin-top: 80px
     padding-top: 90px
-    background: url("../images/bg_portfolio.jpg") no-repeat top left
+    background: url("../images/bg_portfolio.jpg") no-repeat bottom right
     & .title
       margin: 0
       text-align: center
@@ -238,13 +266,73 @@
         font-size: 20px
         line-height: 1.4
   & .btn_white
-    margin: 105px auto
-
-
-
-.copyright
-  &__block
+    margin: 100px auto 180px
+  &__pagination
+    margin-top: 75px
+    padding-bottom: 80px
     display: flex
-    flex-direction: column
+    justify-content: center
+    &__list
+      display: flex
+      li
+        margin-right: 15px
+    &__btn
+      width: 45px
+      height: 45px
+      background: $lightestGray
+      border: none
+      +border-radius(50%)
+      &.active
+        background: $green
+        color: #ffffff
+    &__prev, &__next
+      border: none
+      background: none
+    &__prev
+      margin-right: 100px
+    &__next
+      margin-left: 100px
 
 
+.s_contacts
+  margin-top: -85px
+
+.contacts
+  &_main
+    display: flex
+    &__left-block, &__right-block
+      width: 50%
+    &__left-block
+      background: url("../images/bg_form_main.jpg") no-repeat
+      h3
+        margin: 60px 0 40px
+        font-size: 40px
+        font-weight: 800
+        line-height: 1.35
+      & .wrapper_half
+        margin-left: auto
+      & .form-input
+        background-color: inherit
+        border: none
+  &__list
+    margin: 130px 0 65px 90px
+  &__item
+    font-size: 22px
+    line-height: 1.4
+    &::before
+      margin-right: 12px
+      vertical-align: middle
+    &_address::before
+      content: url(../images/icon_location_color.svg)
+    &_email::before
+      content: url(../images/icon_mail_color.svg)
+  &__phone
+    font-size: 40px
+    font-weight: 800
+    &::before
+      content: url("../images/icon_phone_color.svg")
+
+.form__added-file
+  margin-left: 35px
+  display: inline-block
+  color: #ffffff
