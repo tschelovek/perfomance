@@ -54,18 +54,62 @@
         margin-bottom: 10px
 
 .form-input
-  width: 100%
   color: #ffffff
   font-size: 18px
-  margin-bottom: 20px
-  padding: 0 10px
+  //margin-bottom: 20px
+  padding: 20px 0
+  background: inherit
   border: none
-
+  border-bottom: 1px solid $lightGray
   &:focus
     outline: none
+  &::placeholder
+    font-family: ProximaNova, sans-serif
+    font-size: 18px
+    font-weight: 400
+    line-height: 1.5
+    color: #ffffff
 
-.modal-form__row
-  label
-    @include font($textBlack, 16px, 1.3)
-    margin-bottom: 30px
-    display: block
+//.modal-form__row
+//  label
+//    @include font($textBlack, 16px, 1.3)
+//    margin-bottom: 30px
+//    display: block
+
+.callback
+  padding: 85px 0
+  background: url("../images/bg_callback_ind.jpg") no-repeat center top
+  h3
+    max-width: 950px
+    font-size: 40px
+    font-weight: 800
+    line-height: 1.1
+  textarea
+    padding-bottom: 15px
+  &__input-wrapper
+    +flex-column()
+    &:first-child
+      margin-right: 50px
+      width: 45%
+    &:nth-child(2)
+      width: calc(55% - 50px)
+    &:last-child
+      width: 100%
+  &__submit-wrapper
+    margin-top: 55px
+    display: flex
+    flex-direction: row
+    align-items: center
+  &__form
+    margin-top: 30px
+    display: flex
+    flex-wrap: wrap
+  &__add-file
+    margin-top: 30px
+  & .btn_submit
+    //margin-top: 60px
+    width: 45%
+  &__notice
+    margin-left: 50px
+    color: #ffffff
+

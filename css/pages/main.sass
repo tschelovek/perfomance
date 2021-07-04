@@ -69,7 +69,6 @@
       display: flex
     & .btn_small
       margin-top: 25px
-
   &_main
     & .services
       margin-top: 70px
@@ -87,7 +86,6 @@
           z-index: 30
         &__list__item
           color: #ffffff
-
       &__item
         &:hover .services__info
           top: 0
@@ -97,8 +95,6 @@
           background: #ffffff
         &:hover .btn_round>svg>path
           fill: $blue
-
-
         &__title
           color: #ffffff
       &__image-block
@@ -113,7 +109,6 @@
           +border-radius(10px)
           background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0))
           @include transition(background 0.5s)
-
   &_page
     & .services
       margin-top: 60px
@@ -122,7 +117,29 @@
         &__title
           @include font($blue, 800, 30px, 1.15)
       &__image-block
+        position: relative
         +border-radius(10px)
+      &__info
+        position: relative
+        &__first-row, &__list, &__button-wrapper
+          z-index: 30
+        &::after
+          content: ''
+          position: absolute
+          left: 0
+          right: 0
+          top: 100%
+          background: $blue
+          z-index: 10
+          bottom: 0
+          @include transition()
+        &:hover::after
+          top: -12px
+        &:hover .services__item__title, &:hover .services__info__list__item
+          color: #ffffff
+        &:hover .btn_small
+          background-color: #ffffff
+          border: 2px solid #ffffff
 
 
 .bg-text
@@ -282,6 +299,7 @@
       background: $lightestGray
       border: none
       +border-radius(50%)
+      cursor: pointer
       &.active
         background: $green
         color: #ffffff
