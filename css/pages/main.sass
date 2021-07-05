@@ -248,6 +248,7 @@
     margin-top: 80px
     padding-top: 90px
     background: url("../images/bg_portfolio.jpg") no-repeat bottom right
+    background-size: contain
     & .title
       margin: 0
       text-align: center
@@ -299,10 +300,13 @@
       background: $lightestGray
       border: none
       +border-radius(50%)
+      @include transition
       cursor: pointer
       &.active
         background: $green
         color: #ffffff
+      &:hover
+        background: $lightGray
     &__prev, &__next
       border: none
       background: none
@@ -340,6 +344,10 @@
     &::before
       margin-right: 12px
       vertical-align: middle
+    &__title
+      font-size: 14px
+      font-weight: 400
+      color: $gray
     &_address::before
       content: url(../images/icon_location_color.svg)
     &_email::before
@@ -349,6 +357,15 @@
     font-weight: 800
     &::before
       content: url("../images/icon_phone_color.svg")
+  &_page
+    display: flex
+    flex-wrap: wrap
+  &__wrapper_half
+    width: 50%
+    &:first-child
+      background: url("../images/bg_form_contacts.jpg") no-repeat
+      & .wrapper_half
+        margin-left: auto
 
 .form__added-file
   margin-left: 35px
