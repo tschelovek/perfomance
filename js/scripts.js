@@ -87,4 +87,13 @@ $(document).ready(() => {
         $('.adaptive-menu-toggle').toggleClass('adaptive-menu-toggle--open');
         $('.headerNav_adaptive').toggleClass('header_opened');
     });
+
+    /**
+     * FANCYBOX
+     */
+    $('[data-fancybox-modal]').fancybox({
+        trapFocus: true,
+        autoFocus: false,
+        touch: false,
+    });
 });

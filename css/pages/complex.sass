@@ -1,0 +1,164 @@
+.hero
+  &_complex
+    padding: 85px 0
+    background: #666666 url("../images/bg_hero_complex.jpg") no-repeat
+  &__first-row
+    padding: 0 0 50px
+    display: flex
+  h1.white
+    margin-bottom: 0.85em
+    font-size: 58px
+    font-weight: 800
+    line-height: 1
+
+.prices
+  +flex-wrap
+  &_complex
+    margin: 95px 0 90px
+  &__block
+    padding: 40px
+    +flex-column
+    +border-radius(10px)
+    +box-sizing(border-box)
+    &_olive
+      margin: 1rem 0
+      width: 100%
+      background-color: $olive
+      &_complex
+        position: relative
+        background: $olive url("../images/yandex_blur.png") top right 10% no-repeat
+        &::after
+          position: absolute
+          content: url("../images/yandex_30deg.png")
+          top: 40px
+          right: 40px
+          z-index: 10
+        .prices__list
+          padding-right: 400px
+          flex-direction: row
+          flex-wrap: wrap
+          &__item
+            flex: 0 0 50%
+    &_blue
+      margin-right: 1rem
+      background-color: $pastelBlue
+      &_complex
+        width: calc((100% - 1rem) / 2)
+    &_pink
+      background-color: $pastelPink
+      &_complex
+        width: calc((100% - 1rem) / 2)
+  &__title
+    margin-bottom: 30px
+    font-size: 36px
+    font-weight: 600
+  &__list
+    +flex-column
+    &__item
+      margin-bottom: 12px
+      display: inline-flex
+      &::before
+        margin: -3px 18px 0 0
+        content: url("../images/list-mark_arrow.svg")
+  &__info
+    margin-bottom: 30px
+    position: relative
+    font-size: 26px
+    font-weight: 400
+    z-index: 30
+    span.blue
+      font-weight: 700
+
+
+.how
+  margin: 65px 0 55px
+  h2
+    text-align: center
+  &__list
+    margin-top: 110px
+    +flex-wrap
+    &__item
+      padding: 30px
+      margin-bottom: 1.5rem
+      position: relative
+      flex: 0 0 calc((100% - 4.5rem) / 4)
+      background-color: $pastelBlue
+      +border-radius(10px)
+      text-align: center
+      &:not(:nth-child(4n))
+        margin-right: 1.5rem
+      &::before
+        position: absolute
+        left: calc(50% - 52px)
+      &:nth-child(-n+4)
+        padding-top: 70px
+        &::before
+          top: 0
+          @include transform(translateY(-50%))
+      &:nth-child(n+5)
+        padding-bottom: 80px
+        &::before
+          bottom: 0
+          @include transform(translateY(50%))
+      &:first-child
+        &::before
+          content: url("../images/how_icon1.svg")
+      &:nth-child(2)
+        &::before
+          content: url("../images/how_icon2.svg")
+      &:nth-child(3)
+        &::before
+          content: url("../images/how_icon3.svg")
+      &:nth-child(4)
+        &::before
+          content: url("../images/how_icon4.svg")
+      &:nth-child(5)
+        &::before
+          content: url("../images/how_icon5.svg")
+      &:nth-child(6)
+        &::before
+          content: url("../images/how_icon6.svg")
+      &:nth-child(7)
+        &::before
+          content: url("../images/how_icon7.svg")
+      &:last-child
+        &::before
+          content: url("../images/how_icon8.svg")
+    h3
+      margin-bottom: 15px
+      font-size: 20px
+      font-weight: 600
+      line-height: 1.2
+    p
+      font-size: 14px
+      font-weight: 400
+      line-height: calc(22/14)
+
+.voronka
+  h2
+    text-align: center
+  &__list
+    padding-bottom: 50px
+    margin-top: 85px
+    background: url("../images/voronka_blue.svg") top center no-repeat
+  &__line
+    +space
+    align-items: center
+    height: 88px
+    border-bottom: 1px solid $lightGray
+    &__block
+      flex: 0 0 calc(100% / 3)
+      &_left
+        max-width: 240px
+      &_center
+        max-width: 350px
+        color: #ffffff
+        font-size: 18px
+        font-weight: 600
+        line-height: 1.35
+        text-align: center
+      &_right
+        max-width: 270px
+        text-align: right
+
+
