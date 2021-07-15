@@ -852,6 +852,32 @@ div, ul, li, a, button {
   color: #ffffff;
 }
 
+.notice_checked {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.notice_checked + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.notice_checked + label::before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  border: 1px solid #adb5bd;
+  background: #ffffff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+.notice_checked:checked + label::before {
+  content: url("../images/checkbox.svg");
+}
+
 @font-face {
   font-family: ProximaNova;
   src: url(../fonts/ProximaNova-Regular.ttf);
