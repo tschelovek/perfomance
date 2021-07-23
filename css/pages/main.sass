@@ -1,3 +1,29 @@
+.hero
+  &_main
+    background: url('../images/bg_hero_main_compressed.jpg') center top no-repeat
+    &__portfolio-link
+      margin: auto 0 -10px
+      padding: 30px 26px 35px 38px
+      +flex-column
+      max-width: 334px
+      width: 100%
+      background-color: #1378BA
+      font-size: 24px
+      font-weight: 800
+      color: #ffffff
+      +border-radius(10px)
+      & .btn
+        margin: 12px 0 0 auto
+    &__content
+      display: flex
+      &__right-block
+        margin-left: 90px
+        font-size: 24px
+        line-height: 1.5
+        & .btn_gradient
+          margin: 55px 0 95px
+
+
 .benefits
   padding: 55px 0
   background: $lightestGray
@@ -5,7 +31,6 @@
     +space-nw
   &__item
     display: flex
-    font-size: 24px
     @include font($textBlack, 400, 24px, 1.5)
     &_main
       align-items: center
@@ -30,6 +55,31 @@
         content: url("../images/icon_avtorskiy.svg")
       &:nth-child(3)::before
         content: url("../images/icon_sert_spec.svg")
+    &_about
+      +flex-column
+      font-size: 20px
+      font-weight: 600
+      line-height: 1.3
+      color: #ffffff
+      &::before
+        margin-bottom: 35px
+        width: 110px
+        height: 110px
+        +center
+        +border-radius(50%)
+        background-color: rgba(255, 255, 255, 0.15)
+      &:first-child::before
+        content: url("../images/icon_about1.svg")
+      &:nth-child(2)::before
+        content: url("../images/icon_about2.svg")
+      &:nth-child(3)::before
+        content: url("../images/icon_about3.svg")
+      &:nth-child(4)::before
+        content: url("../images/icon_about4.svg")
+  &_about
+    padding: 72px 0 80px
+    background: url('../images/bg_about_advantages.jpg') center top no-repeat
+
 
 .services
   &__list
@@ -67,7 +117,7 @@
       @include font($textBlack, 600, 18px, 1.7)
       &::before
         margin-right: 15px
-        content: url(../images/checked.svg)
+        content: url('../images/checked.svg')
         background: #ffffff
         width: 20px
         height: 20px
@@ -153,7 +203,8 @@
         &:hover .btn_small
           background-color: #ffffff
           border: 2px solid #ffffff
-
+  &_about
+    &__item
 
 .bg-text
   position: relative
@@ -174,28 +225,53 @@
     +space-nw
   &__text
     display: inline-block
+    color: $darkGray
   &__title
     display: block
     font-size: 42px
     font-weight: 600
-
+    color: $textBlack
 
 .approach
+  &_main
+    h2
+      margin-top: 0
+      padding-top: 80px
+    p
+      margin-bottom: 1.5em
   &__text-block
     line-height: 1.6
+    &_complex
+      margin-top: 60px
+      font-size: 16px
+      line-height: 1.625
+      p
+        margin-bottom: 20px
   &__text-highlight
-    margin: 80px 0 70px
-    padding: 20px 50px
+    margin: 80px 0 64px
+    padding: 31px 50px
     display: block
-    border-radius: 35px
+    +border-radius(43px)
     font-size: 24px
     font-weight: 600
     line-height: 1
     background: #1378BA
     color: #ffffff
   &__img
+    padding-left: 90px
     float: right
     max-width: 45%
+    &_complex
+      margin-left: auto
+      max-width: 50%
+      object-fit: contain
+  &_complex
+    background: linear-gradient(to bottom, $lightGray 200px, #ffffff 200px)
+    h2
+      margin-top: 0
+      padding-top: 270px
+    & .wrapper_right
+      display: flex
 
 .s_staff_service-page
   margin-top: 100px
@@ -261,12 +337,11 @@
     margin-top: 80px
     padding-top: 90px
     background: url("../images/bg_portfolio.jpg") no-repeat bottom right
-    background-size: contain
     & .title
       margin: 0
       text-align: center
   &__list
-    margin-top: 95px
+    margin-top: 40px
     display: grid
     grid-gap: 20px
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr))
@@ -320,6 +395,9 @@
         color: #ffffff
       &:hover
         background: $lightGray
+      &_prev, &_next
+        margin: 0 55px
+        background-color: $blue
     &__prev, &__next
       border: none
       background: none
@@ -340,7 +418,7 @@
     &__left-block
       background: url("../images/bg_form_main.jpg") no-repeat
       h3
-        margin: 60px 0 40px
+        margin: 60px 0 20px
         font-size: 40px
         font-weight: 800
         line-height: 1.35
@@ -348,26 +426,40 @@
         margin-left: auto
       & .form-input
         background-color: inherit
-        border: none
+        border-bottom: 1px solid #c4c4c452
+    &__right-block
+      & .wrapper_half
+        +flex-column
+        height: 100%
   &__list
-    margin: 130px 0 65px 90px
+    margin: 30px 0 50px
+    &_main
+      margin: 140px 0 0 90px
   &__item
+    margin-bottom: 20px
+    display: flex
     font-size: 22px
     line-height: 1.4
     &::before
-      margin-right: 12px
-      vertical-align: middle
+      margin-right: 20px
+      align-self: center
     &__title
+      display: block
       font-size: 14px
       font-weight: 400
+      line-height: 1
       color: $gray
     &_address::before
       content: url(../images/icon_location_color.svg)
     &_email::before
       content: url(../images/icon_mail_color.svg)
+    & .email:hover
+      color: $blue
+      @include transition(color 0.4s)
   &__phone
     font-size: 40px
     font-weight: 800
+    line-height: 1
     &::before
       content: url("../images/icon_phone_color.svg")
   &_page
@@ -379,8 +471,51 @@
       background: url("../images/bg_form_contacts.jpg") no-repeat
       & .wrapper_half
         margin-left: auto
+    &.right
+      padding: 130px 0 0 90px
+      h3
+        font-size: 40px
+        font-weight: 800
+        line-height: 1
+    &.left
+      padding: 60px 0 80px
+      h3
+        margin-bottom: 15px
+        font-size: 40px
+        font-weight: 800
+        line-height: 1
+      //& .form__input-wrapper
+      //  padding-right: 100px
+      //  & .form-input
+      //    width: 100%
+      //& .modal-form__row
+      //  margin-top: 26px
+  &__hero
+    padding: 40px 0 140px
+    background: url(../images/bg_contacts.jpg) no-repeat bottom right
+    background-size: cover
+    text-align: center
+    h1
+      font-size: 58px
+      font-weight: 800
+      line-height: 0.8
 
-.form__added-file
-  margin-left: 35px
-  display: inline-block
-  color: #ffffff
+.form
+  &_main
+    & .btn_submit_white
+      margin-bottom: 70px
+  &__input-wrapper
+    padding-right: 100px
+  &-input
+    padding: 18px 0
+    width: 100%
+  &__added-file
+    margin-left: 35px
+    display: inline-block
+    color: #ffffff
+  &__row
+    margin-top: 26px
+
+
+#map
+  margin-top: auto

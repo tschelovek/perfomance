@@ -5,7 +5,6 @@ body
   display: flex
   flex-direction: column
   font-family: ProximaNova, sans-serif
-
   .wrapper
     margin: 0 auto
     max-width: 1330px
@@ -78,7 +77,6 @@ div, ul, li, a, button
   border: none
   &:hover
     +transition
-
   &__content
     margin: 2px
     color: $textBlack
@@ -93,12 +91,25 @@ div, ul, li, a, button
     @include transition(border 0.3s)
     &:hover
       border-color: $green
+    &_white
+      padding: 11px 35px
+      color: #ffffff
+      background: inherit
+      font-size: 15px
+      border: 2px solid #ffffff
+      &.btn_arrowL
+        padding-left: 24px
   &_gradient
     padding: 26px 55px
     +border-radius(35px)
     background: linear-gradient(to right, $blue, $green)
+    font-weight: 800
+    &_small
+      padding: 18px 40px
+      font-size: 12px
+      +border-radius(24px)
   &_white
-    padding: 26px 55px
+    padding: 28px 55px 26px
     +border-radius(35px)
     font-weight: 800
     color: $blue
@@ -107,9 +118,11 @@ div, ul, li, a, button
     &:hover
       color: $green
   &_arrowR::after
-    margin-left: 40px
+    margin-left: 30px
     content: url("../images/arrow_white_btn.svg")
-    vertical-align: middle
+  &_arrowL::before
+    margin-right: 15px
+    content: url("../images/arrow_white_left_btn.svg")
   &_phone-icon::before
     margin-right: 6px
     content: url("../images/phone_grey.svg")
@@ -153,9 +166,12 @@ div, ul, li, a, button
     color: $blue
     border: 2px solid #DDE7ED
   &__delete-file
-    margin-left: 8px
+    padding: 8px
+    margin-left: 4px
     background: none
     border: none
+    &:hover svg path
+      fill: red
 
 
 .slick-slide
@@ -222,10 +238,10 @@ div, ul, li, a, button
   &__h1
     @include font($textBlack, 800, 58px, 1)
     &_main
-      margin-bottom: 40px
+      margin: 64px 0 40px
       padding-bottom: 40px
       position: relative
-      @include font($textBlack, 800, 64px, 1)
+      @include font($textBlack, 800, 64px, 1.1)
       border-bottom: 1px solid #9999994a
       +box
       &::after
@@ -263,4 +279,15 @@ div, ul, li, a, button
     display: flex
     justify-content: center
 
+.innerBlueStripe
+  position: relative
+  &::after
+    content: " "
+    position: absolute
+    display: block
+    bottom: -25px
+    left: calc(50% - 25px)
+    width: 50px
+    height: 3px
+    background: #1378BA
 

@@ -36,9 +36,9 @@
                 </button>
             </div>
 
-            <nav class="nav__header-top">
+            <nav class="nav__header-top headerNav_adaptive">
                 <ul class="header__top__nav-list">
-                    <li class="header__top__nav-item">
+                    <li class="header__top__nav-item" aria-label="main navigation основная навигация">
                         <a href="#" class="header__top__nav-link">О КОМПАНИИ</a>
                     </li>
                     <li class="header__top__nav-item">
@@ -48,26 +48,8 @@
                         <a href="contacts.html" class="header__top__nav-link">КОНТАКТЫ</a>
                     </li>
                 </ul>
-            </nav>
-
-            <div class="header__top__right-block">
-                <a href="tel:+78126655112" type="" class="btn btn_transperent btn_phone-icon">
-                    +7 812 665 51 12
-                    <!--                    <span class="btn__content">+7 812 665 51 12</span>-->
-                </a>
-                <span class="work-time">Пн-пт, с 10:00 до 19:00</span>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="line_white"></div>
-
-    <div class="wrapper">
-        <div class="header__bottom">
-            <nav class="nav__header-services">
-                <ul class="header__nav-list_bottom header__nav-list_bottom_common">
-                    <li>
+                <ul class="header__nav-list_bottom header__nav-list_bottom_common" aria-label="services navigation услуги">
+                    <ali>
                         <a href="#" class="header__nav-list__link">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +62,7 @@
                             </svg>
                             КОНТЕКСТНАЯ РЕКЛАМА
                         </a>
-                    </li>
+                    </ali>
                     <li>
                         <a href="#" class="header__nav-list__link">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -136,9 +118,26 @@
                         </a>
                     </li>
                 </ul>
+
             </nav>
+
+            <div class="header__top__right-block">
+                <a href="tel:+78126655112" type="" class="btn btn_transperent btn_phone-icon">
+                    +7 812 665 51 12
+                    <!--                    <span class="btn__content">+7 812 665 51 12</span>-->
+                </a>
+                <span class="work-time">Пн-пт, с 10:00 до 19:00</span>
+            </div>
+
         </div>
     </div>
+
+    <div class="line_white"></div>
+
+    <!--    <div class="wrapper">-->
+    <!--        <div class="header__bottom">-->
+    <!--        </div>-->
+    <!--    </div>-->
 </header>
 
 <div class="s_hero">
@@ -345,52 +344,26 @@
     </div>
 </div>
 
-<div class="s_how">
-    <div class="wrapper">
-        <div class="how">
-            <h2 class="title"><span class="green">КАК</span> МЫ РАБОТАЕМ?</h2>
-            <ul class="how__list">
-                <li class="how__list__item">
-                    <h3><span class="blue">01.</span> Анализ ниши, разработка стратегии</h3>
-                    <p>Вот вам яркий пример современных тенденций - реализация намеченных плановых заданий однозначно
-                        фиксирует необходимость системы массового участия. </p>
-                </li>
-                <li class="how__list__item">
-                    <h3><span class="blue">02.</span> Настройка<br>аналитики</h3>
-                    <p>Вот вам яркий пример современных тенденций - реализация намеченных плановых заданий однозначно
-                        фиксирует необходимость системы массового участия.</p>
-                </li>
-                <li class="how__list__item">
-                    <h3><span class="blue">03.</span> Подбираем ключевые слова и таргетинги</h3>
-                    <p>Вот вам яркий пример современных тенденций - реализация намеченных плановых заданий однозначно
-                        фиксирует необходимость системы массового участия. </p>
-                </li>
-                <li class="how__list__item">
-                    <h3><span class="blue">04.</span> Готовим яркие продающие объявления</h3>
-                    <p>Вот вам яркий пример современных тенденций - реализация намеченных плановых заданий однозначно
-                        фиксирует необходимость системы массового участия. </p>
-                </li>
-                <li class="how__list__item">
-                    <h3><span class="blue">05.</span> Подготовка посадочных страниц</h3>
-                    <p>Вот вам яркий пример современных тенденций - реализация намеченных плановых заданий однозначно
-                        фиксирует необходимость системы массового участия. </p>
-                </li>
-                <li class="how__list__item">
-                    <h3><span class="blue">06.</span> Настройка и запуск рекламных кампаний</h3>
-                    <p>Вот вам яркий пример современных тенденций - реализация намеченных плановых заданий однозначно
-                        фиксирует необходимость системы массового участия. </p>
-                </li>
-                <li class="how__list__item">
-                    <h3><span class="blue">07.</span> Минусовка и оптимизация кампаний</h3>
-                    <p>Вот вам яркий пример современных тенденций - реализация намеченных плановых заданий однозначно
-                        фиксирует необходимость системы массового участия. </p>
-                </li>
-                <li class="how__list__item">
-                    <h3><span class="blue">08.</span> Расширение и автоматизация трафика</h3>
-                    <p>Вот вам яркий пример современных тенденций - реализация намеченных плановых заданий однозначно
-                        фиксирует необходимость системы массового участия. </p>
-                </li>
-            </ul>
+<div class="s_approach">
+    <div class="wrapper_fullHD">
+        <div class="approach">
+            <div class="wrapper_right">
+                <img src="images/bg_web_analytics.jpg" class="approach__img">
+                <div class="approach__text-block">
+                    <h2 class="title"><span class="green">АНАЛИТИКА</span> - ФУНДАМЕНТ УСПЕШНОЙ РЕКЛАМНОЙ КАМПАНИИ</h2>
+
+                    <p>Лишь многие известные личности и по сей день остаются уделом либералов, которые жаждут быть
+                        объединены в целые кластеры себе подобных. В частности, высокое качество позиционных
+                        исследований способствует подготовке и реализации поставленных обществом задач. Не следует,
+                        однако, забывать, что повышение уровня гражданского сознания не оставляет шанса для
+                        благоприятных перспектив.</p>
+                    <p>С учётом сложившейся международной обстановки, разбавленное изрядной долей эмпатии, рациональное
+                        мышление является качественно новой ступенью существующих финансовых и административных условий.
+                        Безусловно, высокое качество позиционных исследований создаёт необходимость включения в
+                        производственный план целого ряда внеочередных мероприятий с учётом комплекса системы массового
+                        участия.</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -455,79 +428,58 @@
     </div>
 </div>
 
-<div class="s_approach">
-    <div class="wrapper_fullHD">
-        <div class="approach">
-            <div class="wrapper_right">
-                <img src="images/bg_complex_avtor.png" class="approach__img">
-                <div class="approach__text-block">
-                    <h2 class="title"><span class="green">АВТОРСКИЙ</span> ПОДХОД К ИНТЕРНЕТ-РЕКЛАМЕ</h2>
-
-                    <p>Лишь многие известные личности и по сей день остаются уделом либералов, которые жаждут быть
-                        объединены в целые кластеры себе подобных. В частности, высокое качество позиционных
-                        исследований способствует подготовке и реализации поставленных обществом задач. Не следует,
-                        однако, забывать, что повышение уровня гражданского сознания не оставляет шанса для
-                        благоприятных перспектив.</p>
-                    <p>С учётом сложившейся международной обстановки, разбавленное изрядной долей эмпатии, рациональное
-                        мышление является качественно новой ступенью существующих финансовых и административных условий.
-                        Безусловно, высокое качество позиционных исследований создаёт необходимость включения в
-                        производственный план целого ряда внеочередных мероприятий с учётом комплекса системы массового
-                        участия.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="s_prices">
     <div class="wrapper">
         <div class="prices prices_complex">
-            <div class="prices__block prices__block_olive prices__block_olive_complex">
-                <span class="prices__title">Яндекс.Директ</span>
+            <div class="prices__block prices__block_blue prices__block_blue_small">
+                <span class="prices__title">Настройка аналитики</span>
+                <ul class="prices__list">
+                    <li class="prices__list__item">Разработка контент-плана</li>
+                    <li class="prices__list__item">Оформление страницы, оформления постов</li>
+                    <li class="prices__list__item">Подготовка, согласование и размещения контента</li>
+                    <li class="prices__list__item">Взаимодействие с аудиторией страницы</li>
+                    <li class="prices__list__item">Привлечение подписчиков</li>
+                </ul>
+                <div class="prices__info">Стоимость:<br><span class="blue">20 000 руб/мес.</span>
+                </div>
+                <div class="prices__links">
+                    <a href="#callback_modal" class="btn btn_gradient" data-fancybox-modal>ЗАКАЗАТЬ</a>
+                    <a href="#callback_modal" class="btn btn_small btn_blue" data-fancybox-modal>ЗАКАЗАТЬ</a>
+                </div>
+            </div>
+            <div class="prices__block prices__block_pink prices__block_pink_big">
+                <span class="prices__title">Аудит сайта и источников трафика</span>
+                <ul class="prices__list">
+                    <li class="prices__list__item">Работаем с рекламой Вконтакте, РасеБоок, п$адгат, МуТагде!</li>
+                    <li class="prices__list__item">Разработка стратегии и механики таргетированной рекламы</li>
+                    <li class="prices__list__item">Сегментирование аудитории, сбор аудитории сайта и |оок-а-ЙКе.</li>
+                    <li class="prices__list__item">Подбор креативов под каждую аудиторию, А/В тестирование</li>
+                    <li class="prices__list__item">Анализ СТК, конверсии и цены заявки</li>
+                    <li class="prices__list__item">Запуск ремаркетинга и кампаний на похожую аудиторию</li>
+                </ul>
+                <div class="prices__info">Стоимость:<br><span class="blue">20 000 руб/мес.</span>
+                </div>
+                <div class="prices__links">
+                    <a href="#callback_modal" class="btn btn_gradient" data-fancybox-modal>ЗАКАЗАТЬ</a>
+                    <a href="#callback_modal" class="btn btn_small btn_blue" data-fancybox-modal>ЗАКАЗАТЬ</a>
+                </div>
+            </div>
+            <div class="prices__block prices__block_olive prices__block_olive_web">
+                <span class="prices__title">Комплексное SMM-продвижение</span>
                 <ul class="prices__list prices__list_olive">
-                    <li class="prices__list__item">Поисковая реклама</li>
-                    <li class="prices__list__item">Смарт-баннеры</li>
-                    <li class="prices__list__item">Баннер на поиске Яндекса</li>
-                    <li class="prices__list__item">Динамические кампании по фиду</li>
-                    <li class="prices__list__item">Рекламная Сеть Яндекса</li>
-                    <li class="prices__list__item">Ретаргетинг</li>
-                    <li class="prices__list__item">Продвижение мобильных приложений</li>
-                    <li class="prices__list__item">Медийная реклама</li>
+                    <li class="prices__list__item">Разработка стратегии по контенту и привлечению трафика</li>
+                    <li class="prices__list__item">Оформление и упаковка страниц</li>
+                    <li class="prices__list__item">Настройка чат-ботов и рассылки</li>
+                    <li class="prices__list__item">Работа с контентом "под ключ" (5-7 постов и сториз в неделю)</li>
+                    <li class="prices__list__item">Разработка стратегии по контенту и привлечению трафика</li>
+                    <li class="prices__list__item">Оформление и упаковка страниц</li>
+                    <li class="prices__list__item">Настройка чат-ботов и рассылки</li>
+                    <li class="prices__list__item">Работа с контентом "под ключ" (5-7 постов и сториз в неделю)</li>
                 </ul>
                 <div class="prices__info">Стоимость настройки и ведения: <span class="blue">20 000 руб/мес.</span></div>
                 <div class="prices__links">
                     <a href="#callback_modal" class="btn btn_gradient" data-fancybox-modal>ЗАКАЗАТЬ</a>
-                    <a href="#callback_modal" class="btn btn_small btn_blue" data-fancybox-modal>ЗАКАЗАТЬ</a>
-                </div>
-            </div>
-            <div class="prices__block prices__block_blue prices__block_blue_complex">
-                <span class="prices__title">Google.Ads</span>
-                <ul class="prices__list">
-                    <li class="prices__list__item">Поисковая реклама</li>
-                    <li class="prices__list__item">Контекстно-медийная сеть Google</li>
-                    <li class="prices__list__item">Ремаркетиг на поиске и в сети Google</li>
-                    <li class="prices__list__item">Торговая кампания (Google Merchant Center)</li>
-                </ul>
-                <div class="prices__info">Стоимость настройки и ведения:<br><span class="blue">20 000 руб/мес.</span>
-                </div>
-                <div class="prices__links">
-                    <a href="#callback_modal" class="btn btn_gradient" data-fancybox-modal>ЗАКАЗАТЬ</a>
-                    <a href="#callback_modal" class="btn btn_small btn_blue" data-fancybox-modal>ЗАКАЗАТЬ</a>
-                </div>
-            </div>
-            <div class="prices__block prices__block_pink prices__block_pink_complex">
-                <span class="prices__title">Яндекс.Маркет</span>
-                <ul class="prices__list">
-                    <li class="prices__list__item">Подготовка фида ля Яндекс.Маркета</li>
-                    <li class="prices__list__item">Регистрация магазина, настройка параметров</li>
-                    <li class="prices__list__item">Управление ставками через Pricelabs</li>
-                    <li class="prices__list__item">Мультиканальная аналитика</li>
-                </ul>
-                <div class="prices__info">Ведение кампании на Я.Маркете:<br><span class="blue">20 000 руб/мес.</span>
-                </div>
-                <div class="prices__links">
-                    <a href="#callback_modal" class="btn btn_gradient" data-fancybox-modal>ЗАКАЗАТЬ</a>
-                    <a href="#callback_modal" class="btn btn_small btn_blue" data-fancybox-modal>ЗАКАЗАТЬ</a>
+                    <a href="#callback_modal" class="btn btn_small btn_blue" data-fancybox-modal>ЗАДАТЬ ВОПРОС</a>
                 </div>
             </div>
         </div>
@@ -538,7 +490,7 @@
     <div class="wrapper_fullHD">
         <div class="partners">
             <div class="wrapper">
-                <h2 class="title"><span class="green">С КЕМ</span> МЫ РАБОТАЕМ</h2>
+                <h2 class="title"><span class="green">НАМ</span> ДОВЕРЯЮТ</h2>
                 <div class="partners__list">
                     <div class="partners__item">
                         <div class="partners__item__wrapper">
@@ -598,7 +550,7 @@
     <div class="wrapper_fullHD">
         <div class="callback">
             <div class="wrapper">
-                <h3 class="white">У ВАС ЕСТЬ ПОХОЖАЯ ЗАДАЧА? ОСТАВЬТЕ ЗАЯВКУ И МЫ ПРЕДЛОЖИМ ВАРИАНТЫ ЕЕ РЕШЕНИЯ:</h3>
+                <h3 class="white">У ВАС ЕСТЬ ПОХОЖАЯ ЗАДАЧА? ОСТАВЬТЕ ЗАЯВКУ<br>И МЫ ПРЕДЛОЖИМ ВАРИАНТЫ ЕЕ РЕШЕНИЯ:</h3>
                 <form method="post"
                       action="#"
                       enctype="multipart/form-data"

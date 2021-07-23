@@ -1,28 +1,23 @@
 .header
   background: url(../images/bg_header_common.jpg) center top no-repeat
   &_main
-    background: url(../images/bag_header_main.jpg) center top no-repeat
-    &__content
-      display: flex
-      &__right-block
-        margin-left: 90px
-        font-size: 24px
-        line-height: 1.5
-        & .btn_gradient
-          margin-top: 55px
+    background: url(../images/bg_header_main.jpg) center top no-repeat
+    & .header
+      &__top
+        padding-bottom: 0
+    //&__content
+    //  display: flex
+    //  &__right-block
+    //    margin-left: 90px
+    //    font-size: 24px
+    //    line-height: 1.5
+    //    & .btn_gradient
+    //      margin-top: 55px
     &__links
       margin-top: 120px
-      &_portfolio
-        margin: 60px 0 -10px
-        padding: 30px 26px 35px 38px
-        background-color: #1378BA
-        font-size: 24px
-        font-weight: 800
-        color: #ffffff
-        +border-radius(10px)
-        & .btn
-          margin: 20px 0 0 auto
   &__top
+    padding-bottom: 60px
+    position: relative
     +space
     align-items: center
     &__nav-list
@@ -58,13 +53,18 @@
   &__nav-list
     &_bottom
       display: flex
+      position: absolute
+      left: 0
       &_main
-        //padding: 0 30px
         flex-direction: column
         +border-radius(10px)
         background: #efeff2
+        bottom: -414px
+        z-index: 100
       &_common
         margin: 10px 0
+        right: 0
+        bottom: 0
         justify-content: space-between
         & .header
           &__nav-list__link

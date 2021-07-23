@@ -36,9 +36,9 @@
                 </button>
             </div>
 
-            <nav class="nav__header-top">
+            <nav class="nav__header-top headerNav_adaptive">
                 <ul class="header__top__nav-list">
-                    <li class="header__top__nav-item">
+                    <li class="header__top__nav-item" aria-label="main navigation основная навигация">
                         <a href="#" class="header__top__nav-link">О КОМПАНИИ</a>
                     </li>
                     <li class="header__top__nav-item">
@@ -48,26 +48,8 @@
                         <a href="contacts.html" class="header__top__nav-link">КОНТАКТЫ</a>
                     </li>
                 </ul>
-            </nav>
-
-            <div class="header__top__right-block">
-                <a href="tel:+78126655112" type="" class="btn btn_transperent btn_phone-icon">
-                    +7 812 665 51 12
-                    <!--                    <span class="btn__content">+7 812 665 51 12</span>-->
-                </a>
-                <span class="work-time">Пн-пт, с 10:00 до 19:00</span>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="line_white"></div>
-
-    <div class="wrapper">
-        <div class="header__bottom">
-            <nav class="nav__header-services">
-                <ul class="header__nav-list_bottom header__nav-list_bottom_common">
-                    <li>
+                <ul class="header__nav-list_bottom header__nav-list_bottom_common" aria-label="services navigation услуги">
+                    <ali>
                         <a href="#" class="header__nav-list__link">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +62,7 @@
                             </svg>
                             КОНТЕКСТНАЯ РЕКЛАМА
                         </a>
-                    </li>
+                    </ali>
                     <li>
                         <a href="#" class="header__nav-list__link">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -136,87 +118,124 @@
                         </a>
                     </li>
                 </ul>
+
             </nav>
+
+            <div class="header__top__right-block">
+                <a href="tel:+78126655112" type="" class="btn btn_transperent btn_phone-icon">
+                    +7 812 665 51 12
+                    <!--                    <span class="btn__content">+7 812 665 51 12</span>-->
+                </a>
+                <span class="work-time">Пн-пт, с 10:00 до 19:00</span>
+            </div>
+
         </div>
     </div>
+
+    <div class="line_white"></div>
+
+    <!--    <div class="wrapper">-->
+    <!--        <div class="header__bottom">-->
+    <!--        </div>-->
+    <!--    </div>-->
 </header>
 
-<div class="wrapper_fullHD contacts_page">
-    <div class="contacts__wrapper_half">
-        <div class="wrapper_half">
-            <h3 class="white">ЗАКАЖИТЕ РАСЧЕТ ДЛЯ ПРОДВИЖЕНИЯ БИЗНЕСА</h3>
-            <form method="post"
-                  action="#"
-                  enctype="multipart/form-data"
-                  class="modal-form"
-                  data-form-ids="popup">
+<div class="s_hero">
+    <div class="wrapper_fullHD">
+        <div class="hero contacts__hero">
+            <div class="wrapper">
+                <h1 class="title_center">НАШИ КОНТАКТЫ</h1>
+                <nav class="breadcrumbs innerBlueStripe">
+                    <ul class="breadcrumbs__list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><span>Наши услуги</span></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
 
-                <div class="modal__input-wrapper">
-                    <input type="text" name="modal_name" placeholder="Введите ваше имя" class="form-input" required="">
-                    <input type="text" name="modal_phone" placeholder="Введите ваш телефон"
-                           class="form-input form-input--tel" required="">
-                    <input type="text" name="modal_email" placeholder="Введите ваш E-mail"
-                           class="form-input" required="">
-                    <textarea name="modal_message" class="form-input form-textarea" id="" cols="30" rows="2"
-                              placeholder="Ваш проект"></textarea>
-                </div>
+<div class="s_contacts">
+    <div class="wrapper_fullHD contacts_page">
+        <div class="contacts__wrapper_half left">
+            <div class="wrapper_half">
+                <h3 class="white">ОБРАТНАЯ СВЯЗЬ</h3>
+                <form method="post"
+                      action="#"
+                      enctype="multipart/form-data"
+                      class="form_contacts"
+                      data-form-ids="popup">
 
-                <div class="modal-form__row">
-                    <button type="button" class="btn btn_small btn_small_white" name="add_file" value="">
-                        ПРИКРЕПИТЬ ФАЙЛ
-                    </button>
-                    <div class="form__added-file">
-                        <span class="form__file-name">filename.doc</span>
-                        <button type="button" class="btn btn__delete-file" name="send" value="">
-                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.66683 1.27325L8.72683 0.333252L5.00016 4.05992L1.2735 0.333252L0.333496 1.27325L4.06016 4.99992L0.333496 8.72659L1.2735 9.66659L5.00016 5.93992L8.72683 9.66659L9.66683 8.72659L5.94016 4.99992L9.66683 1.27325Z"
-                                      fill="#E0E0E0"/>
-                            </svg>
-                        </button>
+                    <div class="form__input-wrapper">
+                        <input type="text" name="modal_name" placeholder="Введите ваше имя" class="form-input"
+                               required="">
+                        <input type="text" name="modal_phone" placeholder="Введите ваш телефон"
+                               class="form-input form-input--tel" required="">
+                        <input type="text" name="modal_email" placeholder="Введите ваш E-mail"
+                               class="form-input" required="">
+                        <textarea name="modal_message" class="form-input form-textarea" id="" cols="30" rows="2"
+                                  placeholder="Ваш проект"></textarea>
                     </div>
-                </div>
 
-                <div class="modal-form__row">
-                    <input type="checkbox" class="notice_checked" checked="" name="notice" id="notice">
-                    <label class="notice_checked__label" for="notice">
-                        Отправляя заявку, я соглашаюсь на обработку персональных данных
-                    </label>
-                </div>
+                    <div class="form__row">
+                        <button type="button" class="btn btn_small btn_small_white" name="add_file" value="">
+                            ПРИКРЕПИТЬ ФАЙЛ
+                        </button>
+                        <div class="form__added-file">
+                            <span class="form__file-name">filename.doc</span>
+                            <button type="button" class="btn btn__delete-file" name="send" value="">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.66683 1.27325L8.72683 0.333252L5.00016 4.05992L1.2735 0.333252L0.333496 1.27325L4.06016 4.99992L0.333496 8.72659L1.2735 9.66659L5.00016 5.93992L8.72683 9.66659L9.66683 8.72659L5.94016 4.99992L9.66683 1.27325Z"
+                                          fill="#E0E0E0"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
 
-                <div class="modal-form__row">
-                    <button type="submit" class="btn_submit btn btn_submit_white" name="send" value="">
-                        ОСТАВИТЬ ЗАЯВКУ НА ИДИВИДУАЛЬНЫЙ РАСЧЕТ
-                    </button>
-                </div>
-            </form>
+                    <div class="form__row">
+                        <input type="checkbox" class="notice_checked" checked="" name="notice" id="notice">
+                        <label class="notice_checked__label white" for="notice">
+                            Отправляя заявку, я соглашаюсь на обработку персональных данных
+                        </label>
+                    </div>
+
+                    <div class="form__row">
+                        <button type="submit" class="btn_submit btn btn_gradient" name="send" value="">
+                            ОСТАВИТЬ ЗАЯВКУ</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="contacts__wrapper_half right">
+                <h3>СВЯЗАТЬСЯ С НАМИ:</h3>
+                <ul class="contacts__list">
+                    <li class="contacts__item">
+                        <a href="tel:+78126655112" class="contacts__phone">
+                            +7 812 665 51 12
+                        </a>
+                    </li>
+                    <li class="contacts__item contacts__item_email">
+                        <div class="contacts__item__wrapper">
+                            <span class="contacts__item__title">Для предложений о сотрудничестве:</span>
+                            <a href="mailto:info@perfomance-group.ru" class="email">info@perfomance-group.ru</a>
+                        </div>
+                    </li>
+                    <li class="contacts__item contacts__item_email">
+                        <div class="contacts__item__wrapper">
+                            <span class="contacts__item__title">Отдел продаж:</span>
+                            <a href="mailto:sales@perfomance-group.ru" class="email">sales@perfomance-group.ru</a>
+                        </div>
+                    </li>
+                    <li class="contacts__item contacts__item_address">Санкт-Петербург, ул. Заозерная, 8А, офис 301</li>
+                </ul>
+                <a href="#callback_modal" class="btn btn_white btn_blue">ДОГОВОРИТЬСЯ О ВИЗИТЕ В ОФИС</a>
+        </div>
+        <div id="map">
+            <img src="./images/map2.jpg" alt="">
         </div>
     </div>
-    <div class="contacts__wrapper_half">
-        <div class="wrapper_half">
-            <h3>СВЯЗАТЬСЯ С НАМИ:</h3>
-            <ul class="contacts__list">
-                <li class="contacts__item">
-                    <a href="tel:+78126655112" class="contacts__phone">
-                        +7 812 665 51 12
-                    </a>
-                </li>
-                <li class="contacts__item contacts__item_email">
-                    <span class="contacts__item__title">Для предложений о сотрудничестве:</span>
-                    <a href="mailto:info@perfomance-group.ru" class="email">info@perfomance-group.ru</a>
-                </li>
-                <li class="contacts__item contacts__item_email">
-                    <span class="contacts__item__title">Отдел продаж:</span>
-                    <a href="mailto:sales@perfomance-group.ru" class="email">sales@perfomance-group.ru</a>
-                </li>
-                <li class="contacts__item contacts__item_address">Санкт-Петербург, ул. Заозерная, 8А, офис 301</li>
-            </ul>
-        </div>
-    </div>
-    <div id="map">
-        <img src="./images/map2.jpg" alt="">
-    </div>
-
 </div>
 
 <footer>
