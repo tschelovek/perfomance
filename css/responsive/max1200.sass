@@ -1,4 +1,57 @@
 @media only screen and (max-width: 1200px)
+  .header
+    &__top
+      padding-bottom: 0
+
+  .hero
+    & h1.white, .hero h1
+      font-size: 52px
+    &_main
+      &__content
+        flex-direction: column-reverse
+        position: relative
+      &__portfolio-link
+        position: absolute
+        right: 2em
+        bottom: 0
+
+  .title__h1_main
+    font-size: 60px
+
+  h2.title, h3.title
+    font-size: 58px
+
+  .btn_gradient, .btn_submit_white
+    padding: 20px 44px
+
+  .benefits
+    &__item
+      &_weba, &_social, &_complex
+        font-size: 18px
+      &_main
+        flex-direction: column
+        text-align: center
+      &::before
+        margin-right: 0.75em
+
+  .bg-text::before
+    font-size: 108px
+
+  .contacts_main
+    flex-direction: column
+
+  .contacts_main__left-block, .contacts_main__right-block
+    width: 100%
+
+  .callback__form .callback__input-wrapper
+    width: 100%
+
+  .callback__form .callback__input-wrapper.callback__submit-wrapper
+    flex-direction: column
+
+  .callback__notice
+    margin: 1rem 0 0
+
   .footer
     & .wrapper
       justify-content: space-around

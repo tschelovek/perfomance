@@ -1,4 +1,44 @@
 @media only screen and (max-width: 950px)
+
+  .s_hero .hero
+    padding-top: 0
+
+  .hero h1.white, .hero h1
+    margin-top: 1em
+    font-size: 46px
+
+  h2.title, h3.title
+    font-size: 52px
+
+  .btn_gradient, .btn_submit_white
+    font-size: 16px
+
+  .hero
+    &__first-row
+      flex-direction: column
+      &__right
+        margin: 1em auto
+
+  .benefits
+    &__list
+      &_weba
+        margin-top: 0
+    &__item
+      &_weba, &_social, &_complex
+        font-size: 1rem
+      &::before
+        margin-right: 0.75em
+
+  .logo
+    &__img
+      height: 60px
+      padding-bottom: 12px
+    &__text
+      padding: 4px 10px 2px
+      bottom: -12px
+      left: 9px
+      right: unset
+
   .footer
     &__logo
       & .logo__text

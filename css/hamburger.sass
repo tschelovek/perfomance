@@ -8,18 +8,29 @@
 .adaptive-menu-toggle
   margin: auto
   position: relative
-  display: block
-  width: 30px
-  height: 24px
+  width: 52px
+  height: 52px
   z-index: 99
   background: inherit
-  border: none
-  &:focus
-    outline: none
+  border: 1px solid $greyBlue
+  border-radius: 50%
+  //&:focus
+  //  outline: none
+  //&:focus-visible
+  //  outline: none
+  &::after
+    content: 'МЕНЮ'
+    position: absolute
+    bottom: -20px
+    left: 0
+    right: 0
+    color: $blue
+    font-weight: 800
+    font-size: 10px
 
 .menu-toggle-inner
-  width: 100%
-  height: 100%
+  width: 16px
+  height: 10px
   position: absolute
   left: 0
   top: 0
@@ -29,12 +40,12 @@
 
 .menu-toggle-line
   position: absolute
-  background: $textBlack
+  background: $blue
   display: block
   margin: auto
-  height: 4px
+  height: 1px
   width: 100%
-  +border-radius(3px)
+  //+border-radius(3px)
 
 .menu-toggle-line--1
   top: 0
@@ -54,7 +65,7 @@
 .menu-toggle-line--4,
 .menu-toggle-line--5
   opacity: 0
-  top: 10px
+  top: 6px
 
 .menu-toggle-line--4
   -webkit-transition: opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s
@@ -69,7 +80,7 @@
   -moz-transition: opacity 0.2s ease 0s, transform 0.2s ease 0s, -moz-transform 0.2s ease 0s
 
 .adaptive-menu-toggle--open .menu-toggle-line
-  background: $textBlack
+  background: $blue
 
 .adaptive-menu-toggle--open .menu-toggle-line--1
   width: 0
@@ -102,25 +113,51 @@
 @media only screen and (max-width: 1200px)
   .header__hamburger
     display: block !important
-
+    padding: 0 16px
     right: 10px
     top: 20px
 
+  .header
+    &__top
+      &__nav-list
+        justify-content: center
+      &__nav-item
+        padding: 1em
+    &__nav-list
+      &_bottom
+        position: unset
+        li
+          display: flex
+          flex: 0 1 20%
+          margin: 8px
+      &__link
+        display: flex
+        flex: 0 0 1
+        width: 100%
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        text-align: center
+        border-radius: 10px
+        white-space: unset
+        color: $blue
+        background-color: #ffffff
+        & svg path
+          fill: $blue
+
+  .header__nav-list_bottom_common .header__nav-list__link
+    padding: 1rem
+
   .headerNav_adaptive
-    background: $textBlack
+    background: $lightBlue
     display: none
-    padding-top: 60px
+    padding: 120px 0 40px
     position: absolute
     left: -15px
     right: -15px
     top: 0
     +transform(translateX(-100%))
     z-index: 3
-
-    ul
-      list-style: none
-      margin: 0
-      padding: 0
 
     .address p
       @include font($textBlack)
@@ -131,14 +168,26 @@
     display: block !important
     +transform(translateX(0))
 
-  .headerNav_adaptive a
-    background: $white
-    border: $textBlack 1px solid
-    border-bottom: none
-    display: block
-    @include font($textBlack)
-    padding: 10px
-    text-decoration: none
+  //.headerNav_adaptive a
+  //  background: $white
+  //  border: $textBlack 1px solid
+  //  border-bottom: none
+  //  display: block
+  //  @include font($textBlack)
+  //  padding: 10px
+  //  text-decoration: none
+  //
+  //.headerNav_adaptive li:last-child a
+  //  border-bottom: $textBlack 1px solid
 
-  .headerNav_adaptive li:last-child a
-    border-bottom: $textBlack 1px solid
+@media only screen and (max-width: 767px)
+  .header
+    &__top
+      &__nav-list
+        justify-content: left
+        flex-direction: column
+      &__nav-item
+        padding: 1em
+        border-bottom: 1px solid #ffffff
+        &:first-child
+          border-top: 1px solid #ffffff

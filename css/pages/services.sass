@@ -35,6 +35,155 @@
 
 .about
   &__hero
+    padding: 90px 0 70px
     background: url("../images/bg_hero_about.jpg") no-repeat center top
+    & .breadcrumbs
+      &__list
+        justify-content: left
+      a
+        color: #ffffff
+    & .hero
+      &__first-row h1.white
+        margin-bottom: 0.4em
+      &__second-row
+        margin-top: 55px
+        display: flex
+        &__left
+          margin-right: 60px
+          & .list__title
+            margin: 50px 0 40px
+            display: block
+            font-weight: 600
+            font-size: 24px
+            line-height: 1.35
+        &__right
+          +flex-column
+          justify-content: flex-end
+          p
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.6
+            z-index: 50
+          blockquote
+            margin: 40px 0
+            padding: 24px 20px 40px 32px
+            position: relative
+            +border-radius(10px)
+            background-color: rgba(196, 196, 196, 0.2)
+            &::after
+              content: url("../images/quotation_marks.svg")
+              position: absolute
+              bottom: -5px
+              right: 40px
+            & .boss-info
+              margin-top: 24px
+              img
+                margin-right: 24px
+                float: left
+              &__name
+                padding-top: 4px
+                display: block
+                font-weight: 600
+                font-size: 26px
+                line-height: 1
+              &__job
+                font-weight: 400
+                font-size: 15px
+                line-height: 1
+    & .btn_gradient
+      margin-top: 40px
+      padding: 19px 55px
+      font-size: 12px
+  &__text_1
+    margin-bottom: auto
+  &__download-link
+    +flex-column
+    width: 200px
+    height: 200px
+    align-items: center
+    justify-content: center
+    text-align: center
+    +border-radius(50%)
+    color: #ffffff
+    background-color: rgba(255, 255, 255, 0.15)
+    font-weight: 800
+    font-size: 15px
+    line-height: 1.5
+    span
+      margin-top: 1em
+      font-weight: 400
+      font-size: 12px
+      opacity: 0.5
+    &::before
+      content: url("../images/icon_download.svg")
+      margin-bottom: 10px
+  &__img
+    +border-radius(10px)
+  &__project-list
+    +flex-wrap
+    li
+      margin-bottom: 0.375em
+      display: flex
+      align-items: center
+      width: 50%
+      font-weight: 400
+      font-size: 18px
+      &::before
+        content: ''
+        margin-right: 12px
+        display: block
+        width: 7px
+        height: 7px
+        +border-radius(50%)
+        background-color: $blue
+
+
+
+
+
+.tasks
+  margin-bottom: 90px
+  h2
+    margin-bottom: 80px
+    text-align: center
+  &__list
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(400px, 420px))
+    grid-gap: 20px
+    justify-content: center
+  &__item
+    padding: 30px
+    display: flex
+    overflow: hidden
+    +border-radius(10px)
+    &:first-child
+      background: url("../images/about_task1.jpg") no-repeat
+    &:nth-child(2)
+      background: url("../images/about_task2.jpg") no-repeat
+    &:nth-child(3)
+      background: url("../images/about_task3.jpg") no-repeat
+    &:nth-child(4)
+      background: url("../images/about_task4.jpg") no-repeat
+    &:nth-child(5)
+      background: url("../images/about_task5.jpg") no-repeat
+    &:nth-child(6)
+      background: url("../images/about_task6.jpg") no-repeat
+  &__content
+    margin-top: 190px
+    padding-top: 24px
+    +space-nw
+    max-width: 100%
+    width: 100%
+    border-top: 1px solid #999999
+    &__text
+      color: #ffffff
+    &__title
+      margin-bottom: 12px
+      font-size: 26px
+      font-weight: 800
+      line-height: 1.25
+    span
+      font-size: 16px
+      font-weight: 400
 
 

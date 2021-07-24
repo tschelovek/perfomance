@@ -22,6 +22,14 @@
         line-height: 1.5
         & .btn_gradient
           margin: 55px 0 95px
+  &_social
+    padding: 84px 0
+    background: url('../images/bg_hero_social.jpg') center top no-repeat
+  &_weba
+    padding: 84px 0
+    background: url('../images/bg_hero_weba.jpg') center top no-repeat
+    & .hero__first-row__right
+      margin-left: auto
 
 
 .benefits
@@ -29,7 +37,10 @@
   background: $lightestGray
   &__list
     +space-nw
+    &_weba
+      margin-top: 60px
   &__item
+    margin-right: 1em
     display: flex
     @include font($textBlack, 400, 24px, 1.5)
     &_main
@@ -43,6 +54,7 @@
       &:nth-child(3)::before
         content: url("../images/benef3.svg")
     &_complex
+      align-items: center
       color: #ffffff
       font-size: 20px
       font-weight: 600
@@ -55,6 +67,32 @@
         content: url("../images/icon_avtorskiy.svg")
       &:nth-child(3)::before
         content: url("../images/icon_sert_spec.svg")
+    &_social
+      align-items: center
+      color: #ffffff
+      font-size: 20px
+      font-weight: 600
+      line-height: 1.3
+      &::before
+        margin-right: 35px
+      &:first-child::before
+        content: url("../images/icon_social_hero1.svg")
+      &:nth-child(2)::before
+        content: url("../images/icon_social_hero2.svg")
+      &:nth-child(3)::before
+        content: url("../images/icon_social_hero3.svg")
+    &_weba
+      align-items: center
+      color: #ffffff
+      font-size: 20px
+      font-weight: 600
+      line-height: 1.3
+      &::before
+        margin-right: 35px
+      &:first-child::before
+        content: url("../images/icon_weba_hero1.svg")
+      &:nth-child(2)::before
+        content: url("../images/icon_weba_hero2.svg")
     &_about
       +flex-column
       font-size: 20px
@@ -84,8 +122,9 @@
 .services
   &__list
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+    grid-template-columns: repeat(auto-fit, minmax(400px, 420px))
     grid-gap: 20px
+    justify-content: center
   &__item
     position: relative
     overflow: hidden
@@ -232,6 +271,7 @@
     font-weight: 600
     color: $textBlack
 
+
 .approach
   &_main
     h2
@@ -241,12 +281,12 @@
       margin-bottom: 1.5em
   &__text-block
     line-height: 1.6
-    &_complex
+    &_complex, &_social
       margin-top: 60px
       font-size: 16px
       line-height: 1.625
       p
-        margin-bottom: 20px
+        margin-bottom: 1.5em
   &__text-highlight
     margin: 80px 0 64px
     padding: 31px 50px
@@ -258,13 +298,17 @@
     background: #1378BA
     color: #ffffff
   &__img
-    padding-left: 90px
+    padding-left: 60px
     float: right
     max-width: 45%
     &_complex
       margin-left: auto
-      max-width: 50%
+      max-width: 70%
       object-fit: contain
+    &_complex, &_social
+      padding-left: 90px
+      float: right
+      max-width: 62%
   &_complex
     background: linear-gradient(to bottom, $lightGray 200px, #ffffff 200px)
     h2
@@ -272,6 +316,10 @@
       padding-top: 270px
     & .wrapper_right
       display: flex
+  &_social
+    h2
+      margin-bottom: 80px
+      text-align: center
 
 .s_staff_service-page
   margin-top: 100px
@@ -279,13 +327,15 @@
 .staff
   background: url("../images/bg_paper.jpg") no-repeat top left
   & .title
+    margin-right: 1em
     max-width: 810px
   &__text
     padding: 10px 0 85px
     display: flex
     align-items: center
     &__sertif
-      margin-left: 200px
+      margin-left: auto
+      max-width: 300px
       svg
         padding-top: 90px
         margin-bottom: 30px
@@ -423,7 +473,10 @@
         font-weight: 800
         line-height: 1.35
       & .wrapper_half
+        max-width: 670px
         margin-left: auto
+        h3, form
+          margin-left: 20px
       & .form-input
         background-color: inherit
         border-bottom: 1px solid #c4c4c452
@@ -519,3 +572,4 @@
 
 #map
   margin-top: auto
+  overflow: hidden

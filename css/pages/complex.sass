@@ -7,6 +7,7 @@
     display: flex
   h1.white
     margin-bottom: 0.85em
+    margin-right: 0.75em
     font-size: 58px
     font-weight: 800
     line-height: 1
@@ -15,13 +16,18 @@
   +flex-wrap
   &_complex
     margin: 95px 0 90px
+  &_weba
+    h2
+      margin-bottom: 80px
+      width: 100%
+      text-align: center
   &__block
     padding: 40px
     +flex-column
     +border-radius(10px)
     +box-sizing(border-box)
     &_olive
-      margin: 1rem 0
+      margin: 1.5rem 0
       width: 100%
       background-color: $olive
       &_complex
@@ -39,21 +45,39 @@
           flex-wrap: wrap
           &__item
             flex: 0 0 50%
+      &_social
+        position: relative
+        &::after
+          position: absolute
+          content: url("../images/social_ inner_price.png")
+          bottom: -67px
+          right: -87px
+          z-index: 10
     &_blue
-      margin-right: 1rem
+      margin-right: 1.5rem
       background-color: $pastelBlue
       &_complex
-        width: calc((100% - 1rem) / 2)
+        width: calc((100% - 1.5rem) / 2)
+      &_small
+        flex: 5.8
     &_pink
       background-color: $pastelPink
       &_complex
-        width: calc((100% - 1rem) / 2)
+        width: calc((100% - 1.5rem) / 2)
+      &_big
+        flex: 7
   &__title
     margin-bottom: 30px
     font-size: 36px
     font-weight: 600
   &__list
+    margin-bottom: 0.75em
     +flex-column
+    &_weba
+      flex-direction: row
+      flex-wrap: wrap
+      li
+        width: 50%
     &__item
       margin-bottom: 12px
       display: inline-flex
@@ -61,7 +85,7 @@
         margin: -3px 18px 0 0
         content: url("../images/list-mark_arrow.svg")
   &__info
-    margin-bottom: 30px
+    margin: auto 0 1em
     position: relative
     font-size: 26px
     font-weight: 400
@@ -137,12 +161,15 @@
 
 .voronka
   h2
-    margin-top: 50px
+    margin-top: 60px
     text-align: center
   &__list
     padding-bottom: 50px
     margin-top: 85px
-    background: url("../images/voronka_blue_arrows.svg") top center no-repeat
+    &_blue
+      background: url("../images/voronka_blue_arrows.svg") top center no-repeat
+    &_green
+      background: url("../images/voronka_green_arrows.svg") top center no-repeat
   &__line
     +space
     align-items: center

@@ -1,4 +1,25 @@
 @media only screen and (max-width: 767px)
+  .hero h1.white, .hero h1
+    font-size: 40px
+
+  h2.title, h3.title
+    font-size: 46px
+
+
+  .benefits
+    &__list
+      &_weba
+        margin-top: 0
+    &__item
+      flex-direction: column
+      text-align: center
+      &_weba, &_social, &_complex
+        font-size: 1rem
+      &::before
+        margin-right: 0
+
+
+
   .footer
     padding-bottom: 20px
     background: $lightestGray
