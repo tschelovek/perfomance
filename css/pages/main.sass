@@ -1,5 +1,7 @@
 .hero
+  padding: 84px 0
   &_main
+    padding: 0
     background: url('../images/bg_hero_main_compressed.jpg') center top no-repeat
     &__portfolio-link
       margin: auto 0 -10px
@@ -23,14 +25,28 @@
         & .btn_gradient
           margin: 55px 0 95px
   &_social
-    padding: 84px 0
     background: url('../images/bg_hero_social.jpg') center top no-repeat
   &_weba
-    padding: 84px 0
     background: url('../images/bg_hero_weba.jpg') center top no-repeat
     & .hero__first-row__right
       margin-left: auto
-
+  &_case
+    text-align: center
+    background: url('../images/bg_hero_case.jpg') center top no-repeat
+    &__first-block
+      display: flex
+      flex-direction: column-reverse
+      align-items: center
+    & .btn_transperent_white
+      margin-bottom: 44px
+    p
+      margin: 1em auto
+      padding-bottom: 1em
+      max-width: 600px
+      font-weight: 400
+      font-size: 24px
+      line-height: 1.25
+      color: #ffffff
 
 .benefits
   padding: 55px 0
@@ -281,7 +297,7 @@
       margin-bottom: 1.5em
   &__text-block
     line-height: 1.6
-    &_complex, &_social
+    &_complex, &_social, &_case
       margin-top: 60px
       font-size: 16px
       line-height: 1.625

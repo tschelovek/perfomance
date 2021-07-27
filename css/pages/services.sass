@@ -109,6 +109,7 @@
     font-weight: 800
     font-size: 15px
     line-height: 1.5
+    @include transition
     span
       margin-top: 1em
       font-weight: 400
@@ -117,6 +118,8 @@
     &::before
       content: url("../images/icon_download.svg")
       margin-bottom: 10px
+    &:hover
+      background-color: rgba(255, 255, 255, 0.25)
   &__img
     +border-radius(10px)
   &__project-list
@@ -136,10 +139,6 @@
         height: 7px
         +border-radius(50%)
         background-color: $blue
-
-
-
-
 
 .tasks
   margin-bottom: 90px
@@ -186,4 +185,51 @@
       font-size: 16px
       font-weight: 400
 
+.target
+  &__list
+    padding-top: 80px
+    max-width: 1080px
+  h2
+    margin-bottom: 48px
 
+.s_result
+  margin-top: 80px
+  background: $lightestGray
+.result
+  padding: 90px 0
+  display: flex
+  background: $lightestGray url('../images/bg_result_case.svg') left center no-repeat
+  background-size: 390px 390px
+  & .title
+    margin: 0 0 0 108px
+    width: calc(50% - 108px)
+  &__list
+    &__item
+      padding: 24px 60px 24px 208px
+      position: relative
+      font-weight: 400
+      font-size: 16px
+      line-height: 1.25
+      border-bottom: 1px solid $lightGray
+      &::before
+        position: absolute
+        left: 0
+        top: calc(50% - 24px)
+      &:first-child
+        padding-top: 0
+        &::before
+          content: url("../images/result_marker_35.svg")
+      &:nth-child(2)::before
+        content: url("../images/result_marker_25.svg")
+      &:nth-child(3)::before
+        content: url("../images/result_marker_15.svg")
+      &:nth-child(4)::before
+        content: url("../images/result_marker_17.svg")
+      &:last-child
+        padding-bottom: 0
+        border-bottom: unset
+      &__title
+        display: block
+        font-weight: 600
+        font-size: 24px
+        line-height: 1.6

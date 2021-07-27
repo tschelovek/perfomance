@@ -43,14 +43,22 @@
   .contacts_main__left-block, .contacts_main__right-block
     width: 100%
 
-  .callback__form .callback__input-wrapper
-    width: 100%
-
-  .callback__form .callback__input-wrapper.callback__submit-wrapper
-    flex-direction: column
-
-  .callback__notice
-    margin: 1rem 0 0
+  .callback
+    h3
+      text-align: center
+    &__form
+      & .callback__input-wrapper
+        width: 100%
+      & .callback__input-wrapper.callback__submit-wrapper
+        flex-direction: column
+    &__notice
+      margin: 2rem 0 0
+    &__add-file
+      margin-top: 40px
+      display: flex
+      justify-content: center
+    &__submit-wrapper
+      margin-top: 40px
 
   .footer
     & .wrapper
