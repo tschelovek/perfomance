@@ -26,8 +26,10 @@
           margin: 55px 0 95px
   &_social
     background: url('../images/bg_hero_social.jpg') center top no-repeat
+    background-size: cover
   &_weba
     background: url('../images/bg_hero_weba.jpg') center top no-repeat
+    background-size: cover
     & .hero__first-row__right
       margin-left: auto
   &_case
@@ -136,6 +138,8 @@
 
 
 .services
+  h2
+    margin-bottom: 1em
   &__list
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(400px, 420px))
@@ -258,8 +262,6 @@
         &:hover .btn_small
           background-color: #ffffff
           border: 2px solid #ffffff
-  &_about
-    &__item
 
 .bg-text
   position: relative
@@ -274,18 +276,26 @@
 
 .questions
   margin-top: 95px
-  padding: 65px 0
+  display: flex
+  height: 200px
   background: url("../images/bg_stripe.jpg") no-repeat
   & .wrapper
-    +space-nw
+    +center
   &__text
+    margin-right: 1em
     display: inline-block
+    font-size: 18px
     color: $darkGray
   &__title
+    margin-bottom: 0.25em
     display: block
     font-size: 42px
     font-weight: 600
+    line-height: 0.8
     color: $textBlack
+  & .btn_gradient
+    margin: auto
+    padding: 26px 52px
 
 
 .approach
@@ -483,8 +493,10 @@
       width: 50%
     &__left-block
       background: url("../images/bg_form_main.jpg") no-repeat
+      & .notice_checked__label
+        color: #ffffff
       h3
-        margin: 60px 0 20px
+        margin: 1.5em 0 20px
         font-size: 40px
         font-weight: 800
         line-height: 1.35
@@ -493,6 +505,7 @@
         margin-left: auto
         h3, form
           margin-left: 20px
+          margin-right: 20px
       & .form-input
         background-color: inherit
         border-bottom: 1px solid #c4c4c452

@@ -21,7 +21,7 @@
   h2.title, h3.title
     font-size: 58px
 
-  .btn_gradient, .btn_submit_white
+  .btn_gradient:not(.btn_gradient_small), .btn_submit_white
     padding: 20px 44px
 
   .benefits
@@ -37,17 +37,32 @@
   .bg-text::before
     font-size: 108px
 
+  .questions__title
+    font-size: 36px
+
+  .result
+    & .title
+      margin-left: 96px
+      width: calc(50% - 96px)
+      font-size: 48px
+    &__list__item
+      padding-right: 40px
+
   .contacts_main
     flex-direction: column
 
   .contacts_main__left-block, .contacts_main__right-block
     width: 100%
 
+  .contacts__list_main
+    margin-top: 80px
+
   .callback
     h3
       text-align: center
     &__form
       & .callback__input-wrapper
+        margin-right: 0
         width: 100%
       & .callback__input-wrapper.callback__submit-wrapper
         flex-direction: column

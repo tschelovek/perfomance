@@ -20,10 +20,18 @@ $(document).ready(() => {
                 }
             },
             {
+                breakpoint: 820,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
                 breakpoint: 640,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    arrows: false,
                 }
             },
         ]
@@ -51,6 +59,7 @@ $(document).ready(() => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    arrows: false,
                 }
             },
         ]
@@ -81,11 +90,18 @@ $(document).ready(() => {
         prevArrow: '<button type="button" class="slick-prev"><svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="34" cy="34" r="34" fill="#1378BA"/><path d="M30.7203 40.7203L32.0322 39.4084L27.7095 35.0857L42.9143 35.0857L42.9143 33.2359L27.7095 33.2359L32.0322 28.9133L30.7203 27.6014L24.1608 34.1608L30.7203 40.7203Z" fill="white"/></svg></button>',
         responsive: [
             {
-                breakpoint: 1000,
+                breakpoint: 1200,
                 settings: {
                     slidesToShow: 1,
                 }
             },
+            {
+                breakpoint: 640,
+                settings: {
+                    arrows: false,
+                }
+            },
+
         ]
     });
 

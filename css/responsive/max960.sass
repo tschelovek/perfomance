@@ -1,0 +1,78 @@
+@media only screen and (max-width: 960px)
+
+  .logo
+    &__img
+      height: 60px
+      padding-bottom: 12px
+    &__text
+      padding: 4px 10px 2px
+      bottom: -12px
+      left: 9px
+      right: unset
+
+  .s_hero .hero
+    padding-top: 2em
+
+  .hero h1.white, .hero h1
+    margin-top: 1em
+    font-size: 48px
+
+  h2.title, h3.title
+    font-size: 48px
+
+  .btn_gradient, .btn_submit_white
+    font-size: 16px
+
+  .hero
+    &__first-row
+      flex-direction: column
+      &__right
+        margin: 1em auto
+
+  .hero_main__portfolio-link
+    right: 1em
+
+  .prices
+    &__block_olive_complex
+      &::after
+        content: unset
+      & .prices__list
+        padding-right: 0
+
+
+  .questions
+    &__text
+      font-size: 1rem
+    &__title
+      font-size: 32px
+
+  .benefits
+    &__list
+      &_weba
+        margin-top: 0
+    &__item
+      &_weba, &_social, &_complex
+        font-size: 1rem
+      &::before
+        margin-right: 0.75em
+
+  .result
+    padding: 40px 0 64px
+    flex-direction: column
+    align-items: flex-end
+    & .title
+      width: 100%
+      text-align: center
+
+  .bg-text::before
+    font-size: 92px
+    top: -80px
+
+  .footer
+    &__logo
+      & .logo__text
+        +border-radius(0)
+        bottom: -30px
+        right: unset
+        left: 10px
+
