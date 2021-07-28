@@ -48,14 +48,33 @@
     &__list__item
       padding-right: 40px
 
-  .contacts_main
-    flex-direction: column
+  .prices__block_olive_social::after
+    content: ''
+    display: block
+    bottom: -42px
+    right: 0
+    width: 420px
+    height: 400px
+    z-index: 10
+    background: url('../images/social_ inner_price.png')
+    background-size: cover
+
+  .contacts
+    &_main
+      flex-direction: column
+    &__wrapper_half
+      width: 100%
+      &:first-child .wrapper_half
+        margin: 0 16px
 
   .contacts_main__left-block, .contacts_main__right-block
     width: 100%
 
   .contacts__list_main
     margin-top: 80px
+
+  .contacts__wrapper_half.right
+    padding: 60px 0 40px 90px
 
   .callback
     h3
@@ -74,6 +93,13 @@
       justify-content: center
     &__submit-wrapper
       margin-top: 40px
+
+  .voronka
+    &__list
+      padding-bottom: 32px
+    &__line
+      height: 72px
+      font-size: 16px
 
   .footer
     & .wrapper

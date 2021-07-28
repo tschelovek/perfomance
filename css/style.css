@@ -1401,7 +1401,7 @@ div, ul, li, a, button {
 }
 .services__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 420px));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 420px));
   grid-gap: 20px;
   justify-content: center;
 }
@@ -1686,7 +1686,7 @@ div, ul, li, a, button {
   display: flex;
 }
 .approach_social h2 {
-  margin-bottom: 80px;
+  margin-bottom: 1.25em;
   text-align: center;
 }
 
@@ -1791,7 +1791,7 @@ div, ul, li, a, button {
   margin-top: 40px;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 600px));
 }
 .portfolio__img {
   max-height: 500px;
@@ -1923,6 +1923,7 @@ div, ul, li, a, button {
 }
 .contacts__list_main {
   margin: 140px 0 0 90px;
+  width: fit-content;
 }
 .contacts__item {
   margin-bottom: 20px;
@@ -1971,6 +1972,7 @@ div, ul, li, a, button {
 }
 .contacts__wrapper_half:first-child {
   background: url("../images/bg_form_contacts.jpg") no-repeat;
+  background-size: cover;
 }
 .contacts__wrapper_half:first-child .wrapper_half {
   margin-left: auto;
@@ -2638,9 +2640,11 @@ div, ul, li, a, button {
 }
 .voronka__list_blue {
   background: url("../images/voronka_blue_arrows.svg") top center no-repeat;
+  background-size: contain;
 }
 .voronka__list_green {
   background: url("../images/voronka_green_arrows.svg") top center no-repeat;
+  background-size: contain;
 }
 .voronka__line {
   display: flex;
@@ -2773,8 +2777,26 @@ div, ul, li, a, button {
     padding-right: 40px;
   }
 
+  .prices__block_olive_social::after {
+    content: "";
+    display: block;
+    bottom: -42px;
+    right: 0;
+    width: 420px;
+    height: 400px;
+    z-index: 10;
+    background: url("../images/social_ inner_price.png");
+    background-size: cover;
+  }
+
   .contacts_main {
     flex-direction: column;
+  }
+  .contacts__wrapper_half {
+    width: 100%;
+  }
+  .contacts__wrapper_half:first-child .wrapper_half {
+    margin: 0 16px;
   }
 
   .contacts_main__left-block, .contacts_main__right-block {
@@ -2783,6 +2805,10 @@ div, ul, li, a, button {
 
   .contacts__list_main {
     margin-top: 80px;
+  }
+
+  .contacts__wrapper_half.right {
+    padding: 60px 0 40px 90px;
   }
 
   .callback h3 {
@@ -2805,6 +2831,14 @@ div, ul, li, a, button {
   }
   .callback__submit-wrapper {
     margin-top: 40px;
+  }
+
+  .voronka__list {
+    padding-bottom: 32px;
+  }
+  .voronka__line {
+    height: 72px;
+    font-size: 16px;
   }
 
   .footer .wrapper {
@@ -2863,6 +2897,12 @@ div, ul, li, a, button {
   .prices__block_olive_complex .prices__list {
     padding-right: 0;
   }
+  .prices__block_olive_social::after {
+    bottom: -30px;
+    width: 300px;
+    height: 300px;
+    opacity: 0.6;
+  }
 
   .questions__text {
     font-size: 1rem;
@@ -2904,6 +2944,10 @@ div, ul, li, a, button {
     right: unset;
     left: 10px;
   }
+
+  .slick-dots {
+    margin-top: 60px;
+  }
 }
 @media only screen and (max-width: 767px) {
   .s_hero .hero_main {
@@ -2941,6 +2985,10 @@ div, ul, li, a, button {
 
   .services .title {
     text-align: center;
+  }
+
+  .partners__list {
+    margin-top: 40px;
   }
 
   .bg-text::before {
@@ -3002,6 +3050,10 @@ div, ul, li, a, button {
     font-size: 32px;
   }
 
+  .contacts__item {
+    font-size: 18px;
+  }
+
   .prices .prices__block_pink {
     margin-top: 1.5rem;
     width: 100%;
@@ -3012,6 +3064,18 @@ div, ul, li, a, button {
   }
   .prices .prices__block_blue_small {
     flex: unset;
+  }
+  .prices__block_olive_social::after {
+    bottom: 230px;
+    width: 273px;
+    height: 320px;
+    opacity: 0.1;
+  }
+  .prices_complex {
+    margin: 60px 0 0;
+  }
+  .prices__list_weba li {
+    width: 100%;
   }
 
   .footer {
@@ -3095,6 +3159,13 @@ div, ul, li, a, button {
     margin: 0 0 14px;
   }
 
+  .portfolio__item__text__title {
+    font-size: 20px;
+  }
+  .portfolio__item__text__info {
+    font-size: 16px;
+  }
+
   .questions {
     margin: 40px 10px 0;
     padding: 32px 16px;
@@ -3116,6 +3187,9 @@ div, ul, li, a, button {
     font-size: 32px;
     text-align: center;
   }
+  .contacts__list_main {
+    margin: 40px auto 0;
+  }
 
   .staff .title {
     margin-right: unset;
@@ -3126,10 +3200,30 @@ div, ul, li, a, button {
   .footer {
     padding-top: 40px;
   }
+
+  .slick-dots {
+    margin-top: 40px;
+  }
+
+  .slick-slider {
+    margin: 0 auto;
+  }
 }
 @media only screen and (max-width: 480px) {
+  .logo__img {
+    height: 48px;
+  }
+
+  .hero h1.white, .hero h1 {
+    font-size: 26px;
+  }
+
   h2.title, h3.title {
     font-size: 28px;
+  }
+
+  .hero_main__content__right-block {
+    font-size: 16px;
   }
 
   .benefits__item {
@@ -3145,6 +3239,10 @@ div, ul, li, a, button {
 
   .s_approach {
     display: none;
+  }
+
+  .contacts_main__left-block h3 {
+    font-size: 24px;
   }
 }
 @media only screen and (max-width: 360px) {
