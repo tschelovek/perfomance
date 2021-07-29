@@ -135,14 +135,14 @@
   &_about
     padding: 72px 0 80px
     background: url('../images/bg_about_advantages.jpg') center top no-repeat
-
+    background-size: cover
 
 .services
   h2
     margin-bottom: 1em
   &__list
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(320px, 420px))
+    grid-template-columns: repeat(auto-fit, minmax(300px, 420px))
     grid-gap: 20px
     justify-content: center
   &__item
@@ -291,7 +291,7 @@
     display: block
     font-size: 42px
     font-weight: 600
-    line-height: 0.8
+    line-height: 1
     color: $textBlack
   & .btn_gradient
     margin: auto
@@ -302,9 +302,19 @@
   &_main
     h2
       margin-top: 0
-      padding-top: 80px
+      padding-top: 1.25em
     p
       margin-bottom: 1.5em
+    &__img-wrapper
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        width: 336px
+        height: 384px
+        bottom: 0
+        right: 50%
+        background: url("../images/pogodin_name_table.jpg")
   &__text-block
     line-height: 1.6
     &_complex, &_social, &_case
@@ -335,6 +345,7 @@
       padding-left: 90px
       float: right
       max-width: 62%
+      overflow: hidden
   &_complex
     background: linear-gradient(to bottom, $lightGray 200px, #ffffff 200px)
     h2
@@ -421,6 +432,9 @@
     display: grid
     grid-gap: 20px
     grid-template-columns: repeat(auto-fit, minmax(340px, 600px))
+    justify-content: center
+    &.slick-initialized img
+      width: 100%
   &__img
     max-height: 500px
     +border-radius(10px)

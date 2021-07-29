@@ -81,6 +81,30 @@ $(document).ready(() => {
         ]
     });
 
+    $('.portfolio__list').slick({
+        responsive: [
+            {
+                breakpoint: 999999,
+                settings: 'unslick'
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    focusOnSelect: false,
+                    arrows: false,
+                    touchMove: false,
+                    draggable: false,
+                    swipe: false ,
+                    autoplay: false,
+                    infinite: true,
+                }
+            }
+        ]
+    });
+
     $('.case-slider__list').slick({
         infinite: true,
         arrows: true,
@@ -108,7 +132,7 @@ $(document).ready(() => {
     /**
      * HAMBURGER
      */
-    $('.menu-toggle-inner').on('click', () => {
+    $('.btn_menu').on('click', () => {
         $('.adaptive-menu-toggle').toggleClass('adaptive-menu-toggle--open');
         $('.headerNav_adaptive').toggleClass('header_opened');
     });

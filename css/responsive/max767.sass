@@ -46,6 +46,9 @@
         flex-direction: column
       &_weba
         margin-top: 0
+      &_about
+        flex-wrap: wrap
+        gap: 2em
     &__item
       flex-direction: column
       text-align: center
@@ -58,6 +61,14 @@
         flex-direction: row
         &::before
           margin-right: 1em
+      &_about
+        flex: 0 1 45%
+        margin: 0
+        &::before
+          margin: 0 auto 0.5em
+
+  .about__hero .hero__second-row__left
+    margin-right: 0
 
   .staff
     &__text
@@ -74,6 +85,9 @@
         p
           font-size: 1rem
           line-height: 1.2
+
+  .questions__title
+    font-size: 28px
 
   .callback
     padding: 40px 0
@@ -105,12 +119,12 @@
   .footer
     padding-bottom: 20px
     background: $lightestGray
-    &__logo
-      & .logo__text
-        +border-radius(0)
-        bottom: -30px
-        right: unset
-        left: 10px
+    //&__logo
+    //  & .logo__text
+    //    +border-radius(0)
+    //    bottom: -30px
+    //    right: unset
+    //    left: 10px
     &__column
       &:first-child
         width: 100%
@@ -118,7 +132,7 @@
       &:nth-child(2)
         display: none
       &:last-child
-        margin-top: 60px
+        margin: 30px 0 10px
         +center
         & .btn_phone-icon
           +center
@@ -131,7 +145,7 @@
       padding: 10px 15px
       position: absolute
       bottom: -30px
-      right: -15px
-      left: -15px
+      right: 0
+      left: 0
       text-align: center
       background: #ffffff

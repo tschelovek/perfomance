@@ -5,6 +5,10 @@
   h2.title, h3.title
     font-size: 32px
 
+  .btn_submit_white
+    font-size: 14px
+    line-height: 1.4
+
   .header
     background: url('../images/bg_hero_mobile.jpg') center top no-repeat
     &__top__right-block
@@ -15,8 +19,9 @@
         font-size: 12px
         &:last-child
           flex-grow: 5
-          margin: 10px 20px
+          margin: 0 16px
           & .header__nav-list__link
+            padding: 0.5rem
             flex-direction: row
             svg
               margin: 0 14px
@@ -24,11 +29,44 @@
         svg
           margin: 0 0 14px
 
+  .hero
+    &_weba, &_social, &_complex
+      padding-bottom: 2rem
+      & .hero__first-row__right
+        & .btn_gradient
+          margin-top: 3em
+          padding: 20px 32px
+          font-size: 14px
+
   .portfolio__item__text
     &__title
       font-size: 20px
     &__info
       font-size: 16px
+
+  .s_partners
+    margin-top: 60px
+
+  .approach__img_complex, .approach__img_social
+    padding-left: 30px
+
+  .about__download-link
+    width: 160px
+    height: 160px
+
+  .about__hero
+    & .hero__first-row__right
+      margin-bottom: 0
+
+  .about__project-list
+    margin-left: 2em
+    flex-flow: nowrap column
+    li
+      width: fit-content
+
+  .about__hero .hero__second-row__left .list__title
+    margin: 20px 0 16px
+    text-align: center
 
   .questions
     margin: 40px 10px 0
@@ -42,6 +80,20 @@
     &__text
       margin-bottom: 1em
 
+  .benefits
+    &__list
+      width: fit-content
+      margin: 0 auto
+      &_weba, &_social, &_complex
+        flex-direction: column
+    &__item
+      &_weba, &_social, &_complex
+        flex-direction: row
+        &::before
+          margin-right: 1em
+        &:not(:last-child)
+          margin-bottom: 1.5em
+
   .contacts
     &_main__left-block h3
       font-size: 32px
@@ -54,11 +106,17 @@
     padding: 0 1em
     text-align: center
 
+  .callback h3
+    font-size: 28px
+
+  .form__input-wrapper
+    padding: 0
+
   .footer
-    padding-top: 40px
+    padding-top: 10px
 
   .slick-dots
     margin-top: 40px
 
   .slick-slider
-    margin: 0 auto
+    margin: 30px auto 0

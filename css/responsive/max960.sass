@@ -25,6 +25,7 @@
 
   .hero
     &__first-row
+      padding-bottom: 28px
       flex-direction: column
       &__right
         margin: 1em auto
@@ -59,6 +60,14 @@
         font-size: 1rem
       &::before
         margin-right: 0.75em
+      &_about
+        font-size: 18px
+
+  .about__img
+    max-width: 100%
+
+  .about__hero .hero__second-row
+    margin-top: 0
 
   .result
     padding: 40px 0 64px
@@ -72,13 +81,30 @@
     font-size: 92px
     top: -80px
 
+  .s_how .how
+   & .how
+      &__list
+        margin-top: 40px
+        flex-direction: column
+        &__item
+          margin: 1rem 0 1rem 52px
+          padding: 2rem 1rem 2rem 72px
+          text-align: start
+          &::before
+            left: -52px
+            top: calc(50% - 56px)
+            @include transform(unset)
+
+  .voronka__list
+    display: none
+
   .footer
     &__logo
       & .logo__text
         +border-radius(0)
-        bottom: -30px
+        bottom: -10px
         right: unset
-        left: 10px
+        left: 6px
 
   .slick-dots
     margin-top: 60px

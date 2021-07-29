@@ -1,4 +1,7 @@
 @media only screen and (max-width: 480px)
+  body .wrapper
+    padding: 0 10px
+
   .logo__img
     height: 48px
 
@@ -8,13 +11,40 @@
   h2.title, h3.title
     font-size: 28px
 
-  .hero_main__content__right-block
-    font-size: 16px
+  .title__h1_main
+    border-bottom: unset
+    &::after
+      content: unset
 
-  .benefits__item
-    flex-direction: column
-    &::before
-      margin-right: 0
+  .btn_white
+    font-size: 13px
+
+  .btn_gradient, .btn_submit_white
+    font-size: 14px
+
+  .btn_arrowR::after
+    margin-left: 12px
+
+  .form_main .btn_submit_white
+    margin-bottom: 40px
+    padding: 18px 32px
+    +border-radius(41px)
+    font-size: 13px
+
+  .hero_main
+    &__content__right-block
+      font-size: 16px
+    &__portfolio-link
+      margin: 0 auto -10px
+      width: 280px
+
+  .benefits
+    &__item_main
+      flex-direction: column
+      &::before
+        margin-right: 0
+    &__list_about
+      flex-direction: column
 
   .staff__text__sertif
     display: none
@@ -22,5 +52,69 @@
   .s_approach
     display: none
 
-  .contacts_main__left-block h3
-    font-size: 24px
+  .s_partners
+    margin-top: 30px
+
+
+  .contacts
+    &_main__left-block h3
+      font-size: 24px
+    &__list_main
+      padding: 0 15px
+    &__item
+      font-size: 16px
+    &__phone
+      font-size: 28px
+
+  .services__item__title
+    font-size: 22px
+    margin-bottom: 40px
+
+  .portfolio
+    &_main
+      padding-top: 40px
+      & .title
+        margin-bottom: 1.5em
+    &__item__text-container
+      margin-top: -35px
+      position: unset
+      color: #000000
+      text-align: center
+    & .btn_white
+      margin-bottom: 140px
+
+  .prices
+    &_complex
+      margin-top: 8px
+    &__block
+      padding: 20px
+    &__title
+      font-size: 28px
+    &__info
+      font-size: 24px
+    &__links
+      display: flex
+      gap: 1em
+      flex-flow: wrap
+      justify-content: center
+    & .btn_gradient_small
+      margin: 0
+
+  .prices__block_olive_complex .prices__list__item
+    flex: 0 0 100%
+
+  .about__hero .hero__second-row__right .about__text_1
+    line-height: 1.4
+
+  .about__download-link
+    width: 140px
+    height: 140px
+
+  .tasks__content__title
+    font-size: 20px
+
+  .contacts__wrapper_half.right
+    padding: 20px 10px 30px
+    h3
+      font-size: 32px
+      text-align: center

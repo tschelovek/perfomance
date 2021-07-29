@@ -69,7 +69,7 @@
             padding: 24px 20px 40px 32px
             position: relative
             +border-radius(10px)
-            background-color: rgba(196, 196, 196, 0.2)
+            background-color: $lightestGray
             &::after
               content: url("../images/quotation_marks.svg")
               position: absolute
@@ -143,11 +143,11 @@
 .tasks
   margin-bottom: 90px
   h2
-    margin-bottom: 80px
+    margin-bottom: 1.25em
     text-align: center
   &__list
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(400px, 420px))
+    grid-template-columns: repeat(auto-fit, minmax(300px, 420px))
     grid-gap: 20px
     justify-content: center
   &__item
