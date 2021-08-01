@@ -300,15 +300,17 @@
     p
       margin-bottom: 1.5em
     &__img-wrapper
+      display: flex
       position: relative
       &::after
         content: ''
         position: absolute
         width: 336px
         height: 384px
-        bottom: 0
-        right: 50%
-        background: url("../images/pogodin_name_table.jpg")
+        bottom: -190px
+        right: 172px
+        background: url("../images/pogodin_name_table.svg") no-repeat
+
   &__text-block
     line-height: 1.6
     &_complex, &_social, &_case
@@ -318,7 +320,7 @@
       p
         margin-bottom: 1.5em
   &__text-highlight
-    margin: 80px 0 64px
+    margin: 80px -150px 64px 0
     padding: 31px 50px
     display: block
     +border-radius(43px)
@@ -327,10 +329,12 @@
     line-height: 1
     background: #1378BA
     color: #ffffff
+  .wrapper_right
+    display: flex
   &__img
     padding-left: 60px
-    float: right
-    max-width: 45%
+    object-fit: contain
+    //max-width: 45%
     &_complex
       margin-left: auto
       max-width: 70%
@@ -429,7 +433,7 @@
     margin-top: 40px
     display: grid
     grid-gap: 20px
-    grid-template-columns: repeat(auto-fit, minmax(320px, 600px))
+    grid-template-columns: repeat(auto-fit, minmax(300px, 600px))
     justify-content: center
     &.slick-initialized img
       width: 100%

@@ -113,8 +113,19 @@
             top: calc(50% - 56px)
             @include transform(unset)
 
-  .voronka__list
-    display: none
+  .voronka
+    &__list
+      &_green
+        display: none
+      &_blue
+        background-image: none
+    &__line
+      padding: 0.5em 0
+      height: unset
+      flex-direction: column
+      &__block_center
+        padding: 0 1em
+        color: #000000
 
   .footer
     &__logo

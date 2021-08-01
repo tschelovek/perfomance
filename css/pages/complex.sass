@@ -166,8 +166,9 @@
     max-width: 1100px
     text-align: center
   &__list
-    padding-bottom: 50px
+    padding-bottom: 40px
     margin-top: 85px
+    counter-reset: voronkaCounter
     &_blue
       background: url("../images/voronka_blue_arrows.svg") top center no-repeat
       background-size: contain
@@ -181,35 +182,50 @@
     border-bottom: 1px solid $lightGray
     &:first-child
       border-top: 1px solid $lightGray
-      & .voronka__line__block_left
+    & .voronka__line__block
+      &_left
+        max-width: 210px
         &::before
-          content: '01'
+          counter-increment: voronkaCounter
+          content: "0" counter(voronkaCounter)
+      &_right
+        max-width: 220px
     &:nth-child(2)
-      & .voronka__line__block_left
-        &::before
-          content: '02'
+      & .voronka__line__block
+        &_left
+          max-width: 250px
+        &_right
+          max-width: 230px
     &:nth-child(3)
-      & .voronka__line__block_left
-        &::before
-          content: '03'
+      & .voronka__line__block
+        &_left
+          max-width: 260px
+        &_right
+          max-width: 260px
     &:nth-child(4)
-      & .voronka__line__block_left
-        &::before
-          content: '04'
+      & .voronka__line__block
+        &_left
+          max-width: 330px
+        &_right
+          max-width: 300px
     &:nth-child(5)
-      & .voronka__line__block_left
-        &::before
-          content: '05'
+      & .voronka__line__block
+        &_left
+          max-width: 330px
+        &_right
+          max-width: 300px
     &:nth-child(6)
-      & .voronka__line__block_left
-        &::before
-          content: '06'
+      & .voronka__line__block
+        &_left
+          max-width: 330px
+        &_right
+          max-width: 300px
     &__block
       flex: 0 0 calc(100% / 3)
       &_left
+        margin-right: auto
         display: inline-flex
         align-items: center
-        //max-width: 260px
         font-weight: 600
         &::before
           margin-right: 16px
@@ -219,12 +235,14 @@
           @include transform(rotate(270deg))
       &_center
         max-width: 350px
+        align-self: center
         color: #ffffff
         font-size: 18px
         font-weight: 600
         line-height: 1.35
         text-align: center
       &_right
+        margin-left: auto
         font-size: 14px
         text-align: right
 
