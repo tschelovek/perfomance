@@ -1,4 +1,7 @@
 @media only screen and (max-width: 640px)
+  .title__h1
+    font-size: 36px
+
   .hero h1.white, .hero h1
     font-size: 32px
 
@@ -32,11 +35,24 @@
   .hero
     &_weba, &_social, &_complex
       padding-bottom: 2rem
-      & .hero__first-row__right
-        & .btn_gradient
-          margin-top: 3em
-          padding: 20px 32px
-          font-size: 14px
+      & .hero
+        &__first-row
+          &__left
+            display: flex
+            flex-direction: column-reverse
+            align-items: center
+            h1
+              margin: 1em 0 0
+              text-align: center
+          &__right
+            margin: 0 auto
+            & .btn_gradient
+              margin-top: 3em
+              padding: 20px 32px
+              font-size: 14px
+    &_case
+      p
+        font-size: 20px
 
   .portfolio__item__text
     &__title
@@ -47,26 +63,43 @@
   .s_partners
     margin-top: 60px
 
+  .partners
+    padding-bottom: 20px
+
   .approach__img_complex, .approach__img_social
     padding-left: 30px
 
-  .about__download-link
-    width: 160px
-    height: 160px
-
-  .about__hero
-    & .hero__first-row__right
-      margin-bottom: 0
-
-  .about__project-list
-    margin-left: 2em
-    flex-flow: nowrap column
-    li
-      width: fit-content
+  .about
+    &__download-link
+      width: 160px
+      height: 160px
+      &::before
+        margin-bottom: 0
+    &__hero
+      & .hero__first-row__right
+        margin-bottom: 0
+    &__project-list
+      margin-left: 2em
+      flex-flow: nowrap column
+      li
+        width: fit-content
 
   .about__hero .hero__second-row__left .list__title
     margin: 20px 0 16px
     text-align: center
+
+  .services
+    &_page
+      & .btn_round_white
+        display: none
+      & .services
+        &__info
+          &__button-wrapper
+            justify-content: center
+          &__first-row
+            justify-content: center
+            text-align: center
+
 
   .questions
     margin: 40px 10px 0
@@ -100,11 +133,56 @@
       text-align: center
     &__list_main
       margin: 40px auto 0
+    &__wrapper_half
+      &.left
+        padding: 30px 0
+      &.right
+        padding: 60px 20px 40px
+        display: flex
+        flex-direction: column
+        h3
+          text-align: center
+        .contacts__list
+          margin: 20px 0
+        .btn
+          align-self: center
+    &__phone
+      font-size: 32px
 
-  .staff .title
-    margin-right: unset
-    padding: 0 1em
-    text-align: center
+  .stage
+    &__list
+      padding: 0 1em
+      li
+        padding: 24px 0 36px
+        &::after
+          left: unset
+          bottom: unset
+          right: 0
+          top: 24px
+        h3
+          margin-right: 130px
+          font-size: 28px
+
+  .result
+    &__list__item
+      padding-right: 0
+      &__title
+        font-size: 20px
+    & .title
+      margin-left: 0
+      font-size: 40px
+
+  .target
+    .approach__img
+      padding-left: 20px
+
+  .staff
+    .title
+      margin-right: unset
+      padding: 0 1em
+      text-align: center
+    &__text
+      padding: 0
 
   .callback h3
     font-size: 28px
@@ -120,3 +198,6 @@
 
   .slick-slider
     margin: 30px auto 0
+
+  .portfolio__pagination__btn_prev, .portfolio__pagination__btn_next
+    display: none

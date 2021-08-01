@@ -2,13 +2,13 @@
   body .wrapper
     padding: 0 10px
 
+  .content__header
+    margin: 24px 0 48px
+
   .logo__img
     height: 48px
 
-  .hero h1.white, .hero h1
-    font-size: 26px
-
-  h2.title, h3.title
+  h2.title, h3.title, .title__h1
     font-size: 28px
 
   .title__h1_main
@@ -21,9 +21,13 @@
 
   .btn_gradient, .btn_submit_white
     font-size: 14px
+    line-height: 1.2
 
   .btn_arrowR::after
     margin-left: 12px
+
+  .callback__form .btn_small
+    font-weight: 600
 
   .form_main .btn_submit_white
     margin-bottom: 40px
@@ -31,12 +35,21 @@
     +border-radius(41px)
     font-size: 13px
 
-  .hero_main
-    &__content__right-block
-      font-size: 16px
-    &__portfolio-link
-      margin: 0 auto -10px
-      width: 280px
+  .hero
+    &_main
+      &__content__right-block
+        font-size: 16px
+      &__portfolio-link
+        margin: 0 auto -10px
+        width: 280px
+    &_case
+      padding: 0
+      p
+        font-size: 18px
+    h1.white, .hero h1
+      font-size: 26px
+      text-align: center
+
 
   .benefits
     &__item_main
@@ -65,10 +78,29 @@
       font-size: 16px
     &__phone
       font-size: 28px
+    &__wrapper_half.right
+      padding: 20px 10px 30px
+      h3
+        font-size: 32px
+        text-align: center
+      .btn
+        padding: 20px 30px 18px
+      .contacts__list
+        margin-bottom: 0
 
-  .services__item__title
-    font-size: 22px
-    margin-bottom: 40px
+  .services
+    &_page
+      & .services
+        &__info
+          padding: 20px
+          &__list__item
+            font-size: 16px
+        &__item__title
+          font-size: 24px
+    &__item__title
+      font-size: 22px
+      margin-bottom: 40px
+
 
   .portfolio
     &_main
@@ -106,6 +138,15 @@
   .about__hero .hero__second-row__right .about__text_1
     line-height: 1.4
 
+  .result
+    &__list__item
+      padding-left: 180px
+      &__title
+        font-size: 18px
+    & .title
+      font-size: 36px
+
+
   .about__download-link
     width: 140px
     height: 140px
@@ -113,8 +154,16 @@
   .tasks__content__title
     font-size: 20px
 
-  .contacts__wrapper_half.right
-    padding: 20px 10px 30px
-    h3
-      font-size: 32px
-      text-align: center
+  .stage
+    &__list
+      li
+        h3
+          font-size: 24px
+
+  .target
+    &__list
+      padding-top: 32px
+    .approach__img
+      display: none
+
+

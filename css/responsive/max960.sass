@@ -10,11 +10,7 @@
       left: 9px
       right: unset
 
-  .s_hero .hero
-    padding-top: 2em
-
-  .hero h1.white, .hero h1
-    margin-top: 1em
+  .title__h1
     font-size: 48px
 
   h2.title, h3.title
@@ -23,15 +19,32 @@
   .btn_gradient, .btn_submit_white
     font-size: 16px
 
+  .s_hero .hero
+    padding-top: 2em
+
+  .s_partners
+    margin-top: 20px
+
   .hero
     &__first-row
       padding-bottom: 28px
       flex-direction: column
       &__right
         margin: 1em auto
+    h1.white
+      margin-right: 0
+      & .hero h1
+        margin-top: 1em
+        font-size: 48px
+    &_main__portfolio-link
+      right: 1em
 
-  .hero_main__portfolio-link
-    right: 1em
+  .s_staff_service-page
+    margin-top: 20px
+
+  .approach__img
+    &_complex, &_social
+      padding-left: 20px
 
   .prices
     &__block_olive_complex
@@ -68,6 +81,11 @@
 
   .about__hero .hero__second-row
     margin-top: 0
+
+  .target
+    .approach__img
+      padding-left: 40px
+      max-width: 50%
 
   .result
     padding: 40px 0 64px
