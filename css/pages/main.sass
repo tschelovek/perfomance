@@ -230,15 +230,6 @@
       margin-top: 60px
       &__item
         background-color: #F3F3F3
-        &__title
-          @include font($blue, 800, 30px, 1.15)
-      &__image-block
-        position: relative
-        +border-radius(10px)
-      &__info
-        position: relative
-        &__first-row, &__list, &__button-wrapper
-          z-index: 30
         &::after
           content: ''
           position: absolute
@@ -248,9 +239,30 @@
           background: $blue
           z-index: 10
           bottom: 0
-          @include transition()
+          @include transition(top 0.5s ease-in-out)
         &:hover::after
           top: -12px
+        &__title
+          @include font($blue, 800, 30px, 1.15)
+      &__image-block
+        position: relative
+        +border-radius(10px)
+      &__info
+        position: relative
+        &__first-row, &__list, &__button-wrapper
+          z-index: 30
+        //&::after
+        //  content: ''
+        //  position: absolute
+        //  left: 0
+        //  right: 0
+        //  top: 100%
+        //  background: $blue
+        //  z-index: 10
+        //  bottom: 0
+        //  @include transition()
+        //&:hover::after
+        //  top: -12px
         &:hover .services__item__title, &:hover .services__info__list__item
           color: #ffffff
         &:hover .btn_small

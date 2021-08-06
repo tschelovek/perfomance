@@ -153,6 +153,7 @@
   &__item
     padding: 30px
     display: flex
+    position: relative
     overflow: hidden
     +border-radius(10px)
     &:first-child
@@ -167,6 +168,24 @@
       background: url("../images/about_task5.jpg") no-repeat
     &:nth-child(6)
       background: url("../images/about_task6.jpg") no-repeat
+    a.btn_round
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        @include transition(background 0.5s)
+      &:hover::after
+        background-color: rgba(19, 120, 186, 0.4)
   &__content
     margin-top: 190px
     padding-top: 24px
@@ -176,6 +195,7 @@
     border-top: 1px solid #999999
     &__text
       color: #ffffff
+      z-index: 50
     &__title
       margin-bottom: 12px
       font-size: 26px

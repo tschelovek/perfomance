@@ -1142,7 +1142,7 @@ div, ul, li, a, button {
     display: flex;
     flex: 0 0 1;
     width: 100%;
-    min-height: 100vh;
+    min-height: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1535,6 +1535,23 @@ div, ul, li, a, button {
 .services_page .services__item {
   background-color: #F3F3F3;
 }
+.services_page .services__item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: #1378BA;
+  z-index: 10;
+  bottom: 0;
+  -moz-transition: top 0.5s ease-in-out;
+  -o-transition: top 0.5s ease-in-out;
+  -webkit-transition: top 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out;
+}
+.services_page .services__item:hover::after {
+  top: -12px;
+}
 .services_page .services__item__title {
   font-size: 30px;
   font-weight: 800;
@@ -1552,23 +1569,6 @@ div, ul, li, a, button {
 }
 .services_page .services__info__first-row, .services_page .services__info__list, .services_page .services__info__button-wrapper {
   z-index: 30;
-}
-.services_page .services__info::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
-  background: #1378BA;
-  z-index: 10;
-  bottom: 0;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-.services_page .services__info:hover::after {
-  top: -12px;
 }
 .services_page .services__info:hover .services__item__title, .services_page .services__info:hover .services__info__list__item {
   color: #ffffff;
@@ -2261,6 +2261,7 @@ div, ul, li, a, button {
 .tasks__item {
   padding: 30px;
   display: flex;
+  position: relative;
   overflow: hidden;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -2284,6 +2285,29 @@ div, ul, li, a, button {
 .tasks__item:nth-child(6) {
   background: url("../images/about_task6.jpg") no-repeat;
 }
+.tasks__item a.btn_round::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.tasks__item a.btn_round::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -moz-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+}
+.tasks__item a.btn_round:hover::after {
+  background-color: rgba(19, 120, 186, 0.4);
+}
 .tasks__content {
   margin-top: 190px;
   padding-top: 24px;
@@ -2295,6 +2319,7 @@ div, ul, li, a, button {
 }
 .tasks__content__text {
   color: #ffffff;
+  z-index: 50;
 }
 .tasks__content__title {
   margin-bottom: 12px;
