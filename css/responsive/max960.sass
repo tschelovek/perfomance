@@ -42,9 +42,15 @@
   .s_staff_service-page
     margin-top: 20px
 
-  .approach__img
-    &_complex, &_social
-      padding-left: 20px
+  .approach
+    &__text-block_social
+      max-width: 100%
+    &__img
+      &_complex
+        padding-left: 20px
+      &_social
+        margin-left: auto
+        width: 70%
 
   .prices
     &__block_olive_complex
@@ -86,6 +92,8 @@
     .approach__img
       padding-left: 40px
       max-width: 50%
+    &__img_main
+      margin-left: 32px
 
   .result
     padding: 40px 0 64px
@@ -115,15 +123,19 @@
 
   .voronka
     &__list
-      &_green
-        display: none
-      &_blue
+      &_blue, &_green
         background-image: none
+      & .voronka__line .voronka__line__block_left, .voronka__line .voronka__line__block_right
+        max-width: unset
     &__line
       padding: 0.5em 0
       height: unset
       flex-direction: column
+      &__block_left
+        &::before
+          @include transform(unset)
       &__block_center
+        margin-bottom: 1em
         padding: 0 1em
         color: #000000
 

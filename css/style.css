@@ -321,6 +321,7 @@ div, ul, li, a, button {
 .btn_round {
   width: 40px;
   height: 40px;
+  flex-shrink: 0;
   background: #1378BA;
   border-radius: 50%;
   display: flex;
@@ -1469,7 +1470,7 @@ div, ul, li, a, button {
   display: flex;
 }
 .services__info .btn_small {
-  margin-top: 25px;
+  margin-top: auto;
 }
 .services_main .services {
   margin-top: 70px;
@@ -1533,6 +1534,8 @@ div, ul, li, a, button {
   margin-top: 60px;
 }
 .services_page .services__item {
+  display: flex;
+  flex-direction: column;
   background-color: #F3F3F3;
 }
 .services_page .services__item::after {
@@ -1558,6 +1561,13 @@ div, ul, li, a, button {
   color: #1378BA;
   line-height: 1.15;
 }
+.services_page .services__item:hover .services__item__title, .services_page .services__item:hover .services__info__list__item {
+  color: #ffffff;
+}
+.services_page .services__item:hover .btn_small {
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+}
 .services_page .services__image-block {
   position: relative;
   -webkit-border-radius: 10px;
@@ -1566,16 +1576,13 @@ div, ul, li, a, button {
 }
 .services_page .services__info {
   position: relative;
+  flex-grow: 1;
 }
 .services_page .services__info__first-row, .services_page .services__info__list, .services_page .services__info__button-wrapper {
   z-index: 30;
 }
-.services_page .services__info:hover .services__item__title, .services_page .services__info:hover .services__info__list__item {
-  color: #ffffff;
-}
-.services_page .services__info:hover .btn_small {
-  background-color: #ffffff;
-  border: 2px solid #ffffff;
+.services_page .services__info__list {
+  margin-bottom: 25px;
 }
 
 .bg-text {
@@ -1648,13 +1655,17 @@ div, ul, li, a, button {
 .approach__text-block {
   line-height: 1.6;
 }
-.approach__text-block_complex, .approach__text-block_social, .approach__text-block_case {
+.approach__text-block_complex, .approach__text-block_social, .approach__text-block_case, .approach__text-block_web {
   margin-top: 60px;
   font-size: 16px;
   line-height: 1.625;
 }
-.approach__text-block_complex p, .approach__text-block_social p, .approach__text-block_case p {
+.approach__text-block_complex p, .approach__text-block_social p, .approach__text-block_case p, .approach__text-block_web p {
   margin-bottom: 1.5em;
+}
+.approach__text-block_social {
+  margin-top: 0;
+  max-width: 32%;
 }
 .approach__text-highlight {
   margin: 80px -150px 64px 0;
@@ -1671,6 +1682,7 @@ div, ul, li, a, button {
 }
 .approach .wrapper_right {
   display: flex;
+  flex-wrap: wrap;
 }
 .approach__img {
   padding-left: 60px;
@@ -1681,7 +1693,7 @@ div, ul, li, a, button {
   max-width: 70%;
   object-fit: contain;
 }
-.approach__img_complex, .approach__img_social {
+.approach__img_complex, .approach__img_social, .approach__img_web {
   padding-left: 90px;
   float: right;
   max-width: 62%;
@@ -1698,6 +1710,13 @@ div, ul, li, a, button {
   display: flex;
 }
 .approach_social h2 {
+  margin: 1.25em auto;
+  text-align: center;
+}
+.approach_web .wrapper_right {
+  display: block;
+}
+.approach_web h2 {
   margin-bottom: 1.25em;
   text-align: center;
 }
@@ -1867,6 +1886,9 @@ div, ul, li, a, button {
 .portfolio__pagination__btn {
   width: 45px;
   height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #F3F3F3;
   border: none;
   -webkit-border-radius: 50%;
@@ -2305,7 +2327,7 @@ div, ul, li, a, button {
   -webkit-transition: background 0.5s;
   transition: background 0.5s;
 }
-.tasks__item a.btn_round:hover::after {
+.tasks__item:hover a.btn_round::after {
   background-color: rgba(19, 120, 186, 0.4);
 }
 .tasks__content {
@@ -2334,7 +2356,17 @@ div, ul, li, a, button {
 
 .target__list {
   padding-top: 80px;
-  max-width: 1080px;
+}
+.target__item {
+  margin: 0 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.target__img_main {
+  margin: 0 -66px 1em 120px;
+  max-width: 56%;
+  width: 720px;
+  float: right;
 }
 .target h2 {
   margin-bottom: 48px;
@@ -2800,6 +2832,16 @@ div, ul, li, a, button {
   .approach_main__img-wrapper::after {
     bottom: -140px;
   }
+  .approach__text-block_social {
+    max-width: 50%;
+  }
+  .approach__img_social {
+    float: unset;
+    padding-left: 24px;
+    max-width: unset;
+    width: calc(50% - 24px);
+    object-fit: contain;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .header__top {
@@ -2935,6 +2977,10 @@ div, ul, li, a, button {
     font-size: 16px;
   }
 
+  .target__img_main {
+    margin-left: 60px;
+  }
+
   .footer .wrapper {
     justify-content: space-around;
   }
@@ -2999,8 +3045,15 @@ div, ul, li, a, button {
     margin-top: 20px;
   }
 
-  .approach__img_complex, .approach__img_social {
+  .approach__text-block_social {
+    max-width: 100%;
+  }
+  .approach__img_complex {
     padding-left: 20px;
+  }
+  .approach__img_social {
+    margin-left: auto;
+    width: 70%;
   }
 
   .prices__block_olive_complex::after {
@@ -3048,6 +3101,9 @@ div, ul, li, a, button {
     padding-left: 40px;
     max-width: 50%;
   }
+  .target__img_main {
+    margin-left: 32px;
+  }
 
   .result {
     padding: 40px 0 64px;
@@ -3083,18 +3139,26 @@ div, ul, li, a, button {
     transform: unset;
   }
 
-  .voronka__list_green {
-    display: none;
-  }
-  .voronka__list_blue {
+  .voronka__list_blue, .voronka__list_green {
     background-image: none;
+  }
+  .voronka__list .voronka__line .voronka__line__block_left, .voronka__list .voronka__line .voronka__line__block_right {
+    max-width: unset;
   }
   .voronka__line {
     padding: 0.5em 0;
     height: unset;
     flex-direction: column;
   }
+  .voronka__line__block_left::before {
+    -moz-transform: unset;
+    -ms-transform: unset;
+    -o-transform: unset;
+    -webkit-transform: unset;
+    transform: unset;
+  }
   .voronka__line__block_center {
+    margin-bottom: 1em;
     padding: 0 1em;
     color: #000000;
   }
@@ -3198,6 +3262,10 @@ div, ul, li, a, button {
     margin: 0 auto 0.5em;
   }
 
+  .approach__img_web, .approach__img_social {
+    display: none;
+  }
+
   .about__hero .hero__second-row__left {
     margin-right: 0;
   }
@@ -3258,6 +3326,10 @@ div, ul, li, a, button {
   }
   .prices__list_weba li {
     width: 100%;
+  }
+
+  .target__img_main {
+    display: none;
   }
 
   .footer {
@@ -3480,6 +3552,14 @@ div, ul, li, a, button {
   }
   .contacts__phone {
     font-size: 32px;
+  }
+
+  .voronka__line__block_center {
+    display: none;
+  }
+  .voronka__line__block_right {
+    margin: 0.25em auto 0.5em 0;
+    text-align: left;
   }
 
   .stage__list {

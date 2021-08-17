@@ -184,8 +184,8 @@
         right: 0
         bottom: 0
         @include transition(background 0.5s)
-      &:hover::after
-        background-color: rgba(19, 120, 186, 0.4)
+    &:hover a.btn_round::after
+      background-color: rgba(19, 120, 186, 0.4)
   &__content
     margin-top: 190px
     padding-top: 24px
@@ -208,7 +208,15 @@
 .target
   &__list
     padding-top: 80px
-    max-width: 1080px
+  &__item
+    margin: 0 10px
+    border-radius: 10px
+    overflow: hidden
+  &__img_main
+    margin: 0 -66px 1em 120px
+    max-width: 56%
+    width: 720px
+    float: right
   h2
     margin-bottom: 48px
 

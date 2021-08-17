@@ -184,7 +184,7 @@
       height: 100%
       display: flex
     & .btn_small
-      margin-top: 25px
+      margin-top: auto
   &_main
     & .services
       margin-top: 70px
@@ -229,6 +229,8 @@
     & .services
       margin-top: 60px
       &__item
+        display: flex
+        flex-direction: column
         background-color: #F3F3F3
         &::after
           content: ''
@@ -244,30 +246,21 @@
           top: -12px
         &__title
           @include font($blue, 800, 30px, 1.15)
-      &__image-block
-        position: relative
-        +border-radius(10px)
-      &__info
-        position: relative
-        &__first-row, &__list, &__button-wrapper
-          z-index: 30
-        //&::after
-        //  content: ''
-        //  position: absolute
-        //  left: 0
-        //  right: 0
-        //  top: 100%
-        //  background: $blue
-        //  z-index: 10
-        //  bottom: 0
-        //  @include transition()
-        //&:hover::after
-        //  top: -12px
         &:hover .services__item__title, &:hover .services__info__list__item
           color: #ffffff
         &:hover .btn_small
           background-color: #ffffff
           border: 2px solid #ffffff
+      &__image-block
+        position: relative
+        +border-radius(10px)
+      &__info
+        position: relative
+        flex-grow: 1
+        &__first-row, &__list, &__button-wrapper
+          z-index: 30
+        &__list
+          margin-bottom: 25px
 
 .bg-text
   position: relative
@@ -322,15 +315,17 @@
         bottom: -190px
         right: 172px
         background: url("../images/pogodin_name_table.svg") no-repeat
-
   &__text-block
     line-height: 1.6
-    &_complex, &_social, &_case
+    &_complex, &_social, &_case, &_web
       margin-top: 60px
       font-size: 16px
       line-height: 1.625
       p
         margin-bottom: 1.5em
+    &_social
+      margin-top: 0
+      max-width: 32%
   &__text-highlight
     margin: 80px -150px 64px 0
     padding: 31px 50px
@@ -343,6 +338,7 @@
     color: #ffffff
   .wrapper_right
     display: flex
+    flex-wrap: wrap
   &__img
     padding-left: 60px
     object-fit: contain
@@ -351,7 +347,7 @@
       margin-left: auto
       max-width: 70%
       object-fit: contain
-    &_complex, &_social
+    &_complex, &_social, &_web
       padding-left: 90px
       float: right
       max-width: 62%
@@ -364,6 +360,12 @@
     & .wrapper_right
       display: flex
   &_social
+    h2
+      margin: 1.25em auto
+      text-align: center
+  &_web
+    & .wrapper_right
+      display: block
     h2
       margin-bottom: 1.25em
       text-align: center
@@ -489,6 +491,9 @@
     &__btn
       width: 45px
       height: 45px
+      display: flex
+      justify-content: center
+      align-items: center
       background: $lightestGray
       border: none
       +border-radius(50%)
