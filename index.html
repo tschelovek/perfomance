@@ -632,10 +632,10 @@
                         <textarea name="modal_message" class="form-input form-textarea" id="" cols="30" rows="2" placeholder="Ваш проект"></textarea>
                     </div>
 
-                    <div class="form__row">
-                        <button type="button" class="btn btn_small btn_small_white" name="add_file" value="" >
-                            ПРИКРЕПИТЬ ФАЙЛ
-                        </button>
+                    <fieldset class="form__row">
+                        <label for="add_file" class="btn btn_small btn_small_white">ПРИКРЕПИТЬ ФАЙЛ
+                        <input type="file" class="btn_add-file" id="add_file" name="add_file" value="" />
+                        </label>
                         <div class="form__added-file">
                             <span class="form__file-name">filename.doc</span>
                             <button type="button" class="btn btn__delete-file" name="send" value="" >
@@ -644,20 +644,20 @@
                                 </svg>
                             </button>
                         </div>
-                    </div>
+                    </fieldset>
 
-                    <div class="form__row">
+                    <fieldset class="form__row">
                         <input type="checkbox" class="notice_checked" checked="" name="notice" id="notice">
                         <label class="notice_checked__label" for="notice">
                             Отправляя заявку, я соглашаюсь на обработку персональных данных
                         </label>
-                    </div>
+                    </fieldset>
 
-                    <div class="form__row">
+                    <fieldset class="form__row">
                         <button type="submit" class="btn_submit btn btn_submit_white" name="send" value="" >
                             ОСТАВИТЬ ЗАЯВКУ НА ИДИВИДУАЛЬНЫЙ РАСЧЕТ
                         </button>
-                    </div>
+                    </fieldset>
                 </form>
             </div>
         </div>

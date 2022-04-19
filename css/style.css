@@ -389,6 +389,11 @@ div, ul, li, a, button {
 .btn__delete-file:hover svg path {
   fill: red;
 }
+.btn_add-file {
+  width: 1px;
+  font-size: 0;
+  visibility: hidden;
+}
 
 .slick-slide:focus {
   outline: none;
@@ -2066,6 +2071,8 @@ div, ul, li, a, button {
 }
 .form__row {
   margin-top: 26px;
+  padding: 0;
+  border: none;
 }
 
 #map {
@@ -2706,7 +2713,7 @@ div, ul, li, a, button {
 .how__list p {
   font-size: 14px;
   font-weight: 400;
-  line-height: calc(22/14);
+  line-height: 1.5714285714;
 }
 
 .voronka h2 {
@@ -2779,7 +2786,7 @@ div, ul, li, a, button {
   max-width: 300px;
 }
 .voronka__line__block {
-  flex: 0 0 calc(100% / 3);
+  flex: 0 0 33.3333333333%;
 }
 .voronka__line__block_left {
   margin-right: auto;
@@ -2830,7 +2837,7 @@ div, ul, li, a, button {
     font-size: 56px;
   }
   .approach_main__img-wrapper::after {
-    bottom: -140px;
+    bottom: -136px;
   }
   .approach__text-block_social {
     max-width: 50%;
